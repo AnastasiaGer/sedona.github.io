@@ -1,0 +1,47 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  min-width: @page-min-width;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 250;
+}
+
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
