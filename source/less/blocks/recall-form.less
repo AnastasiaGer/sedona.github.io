@@ -260,6 +260,65 @@
   min-height: 56px;
 }
 
+.recall-form__radio-control {
+  cursor: pointer;
+
+  line-height: 26px;
+
+  &:hover .recall-form__radio-icon {
+    background-color: #e5e5e5;
+  }
+
+  &:active .recall-form__radio-icon {
+    background-color: #d5d5d5;
+  }
+
+  &:active .recall-form__radio-icon-tick {
+    background-color: #a4a4a4;
+  }
+}
+
+.recall-form__radio-icon {
+  .absolute-top-left(0, 0, 56px, 56px);
+
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.recall-form__radio-icon-tick {
+  display: none;
+
+  .absolute-top-left(50%, 50%, 22px, 22px);
+
+  margin-left: -11px;
+  margin-top: -11px;
+
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+.recall-form input[type="radio"] {
+  &:checked + .recall-form__radio-icon .recall-form__radio-icon-tick {
+    display: inline-block;
+  }
+
+  &:disabled + .recall-form__radio-icon {
+    background-color: #d5d5d5;
+  }
+
+  &:disabled + .recall-form__radio-icon .recall-form__radio-icon-tick {
+    display: none;
+    background-color: #a4a4a4;
+  }
+}
+
+.recall-form__radio-label {
+  display: block;
+
+  padding: 15px 10px;
+  padding-left: 80px;
+}
+
 /**
     * ===========================================================
     * ===========================================================
