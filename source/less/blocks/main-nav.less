@@ -54,3 +54,80 @@
     cursor: pointer;
   }
 }
+/**
+  * ===========================================================
+  * MAIN NAVIGATION tablet/desktop
+  * ===========================================================
+  */
+  @media (min-width: @tablet-width) {
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #ffffff;
+
+    .clearfix();
+  }
+
+  .main-nav__btn-close {
+    display: none;
+  }
+
+  .main-nav__item {
+
+    width: 20%;
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+
+    &:first-child .main-nav__link {
+      box-shadow: none;
+    }
+
+    &:last-child .main-nav__link {
+      box-shadow: none;
+    }
+  }
+
+  .main-nav__link {
+    padding: 15px 20px;
+    padding-right: 16px;
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+
+    &[href]:hover {
+      background-color: #ffffff;
+      color: #81b3d2;
+    }
+
+    &[href]:active {
+      background-color: #ffffff;
+      color: #b2b2b2;
+    }
+
+    &--active {
+      color: #766357;
+
+      &:hover {
+        background-color: #ffffff;
+        color: #604e43;
+      }
+
+      &:active {
+        background-color: #ffffff;
+        color: #d6d0cc;
+      }
+    }
+  }
+
+  .main-nav__control {
+    display: none;
+  }
+}
