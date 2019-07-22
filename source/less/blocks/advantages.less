@@ -9,11 +9,14 @@
 
 .advantages__list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .advantages__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   position: relative;
   padding: 30px 30px;
   padding-top: 24px;
@@ -32,17 +35,21 @@
 
   overflow: hidden;
 
-  &:first-child {
-    padding-top: 43px;
-    padding-bottom: 26px;
-  }
-
   &--cards {
     padding-top: 35px;
     padding-bottom: 10px;
     padding-left: 70px;
 
     background-color: #ffffff;
+  }
+
+  &--big {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-top: 43px;
+    padding-bottom: 26px;
   }
 
   &--wide {
@@ -56,20 +63,6 @@
 
     background-color: #eeeeee;
     color: #000000;
-  }
-
-  &--gray:not(:last-child)::after {
-    content: "";
-
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-
-    width: 280px;
-    height: 1px;
-    margin-left: -140px;
-
-    box-shadow: inset 0 -1px 0 0 #d6d6d6;
   }
 }
 
@@ -121,12 +114,6 @@
 */
 
 @media (min-width: @tablet-width) {
-  .advantages__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   .advantages__item {
     padding: 30px 43px;
     width: 170px;
@@ -134,20 +121,13 @@
 
     overflow: hidden;
 
-    &:first-child {
+    &--big {
+      display: flex;
+      flex-wrap: nowrap;
+
+      width: 100%;
+
       padding: 30px 43px;
-    }
-
-    &:nth-child(4) {
-      order: 2;
-    }
-
-    &:nth-child(5) {
-      order: 1;
-    }
-
-    &:nth-child(n + 6) {
-      order: 3;
     }
 
     &--wide {
@@ -168,11 +148,13 @@
     }
 
     &--gray {
-      align-self: stretch;
+      display: flex;
+      align-items: stretch;
 
-      padding: 30px 50px;
-      padding-bottom: 25px;
-      width: 156px;
+      padding: 0;
+      margin: 0;
+
+      width: 100%;
       min-height: 190px;
     }
 
@@ -183,6 +165,17 @@
     &--gray:not(:last-child)::after {
       display: none;
     }
+  }
+
+  .advantages__big--two {
+    order: 1;
+  }
+
+  .advantages__gray {
+    padding: 30px 50px;
+    padding-bottom: 25px;
+    width: 156px;
+    min-height: 190px;
   }
 
   .advantages__header {
@@ -250,7 +243,6 @@
     text-align: center;
   }
 }
-
 /**
   * ===========================================================
   * ADVANTAGES SECTION desktop
