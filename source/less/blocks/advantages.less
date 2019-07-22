@@ -66,6 +66,14 @@
   }
 }
 
+.advantages__list--cards {
+  list-style: none;
+}
+
+.advantages__list--gray {
+  list-style: none;
+}
+
 .advantages__header {
   margin: 15px 0;
   margin-bottom: 0;
@@ -167,6 +175,30 @@
     &--gray:not(:last-child)::after {
       display: none;
     }
+  }
+
+  .advantages__list--cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    min-height: 330px;
+  }
+
+  .advantages__list--gray {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    min-height: 190px;
   }
 
   .advantages__big--two {
