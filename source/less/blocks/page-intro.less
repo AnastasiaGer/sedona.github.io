@@ -44,3 +44,77 @@
     line-height: 24px;
   }
 }
+
+/**
+  * ===========================================================
+  * PAGE INTRO tablet
+  * ===========================================================
+*/
+
+@media (min-width: @tablet-width) {
+  .page-intro {
+    padding: 28px 139px;
+    padding-bottom: 40px;
+
+    &--decorated::after {
+      display: none;
+    }
+  }
+
+  .page-intro__header {
+    padding: 0 10px;
+    margin-top: 22px;
+
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+
+    &--large {
+      margin-top: 47px;
+
+      font-size: 30px;
+      line-height: 26px;
+    }
+  }
+
+  .page-intro__content {
+    margin-top: 28px;
+    margin-bottom: 11px;
+
+    &--tiny {
+      padding: 0 80px;
+    }
+  }
+}
+
+/**
+    * ===========================================================
+    * PAGE INTRO desktop
+    * ===========================================================
+*/
+
+@media (min-width: @desktop-width) {
+  .page-intro {
+    padding: 28px 355px;
+    padding-bottom: 40px;
+
+    &--tiny {
+      padding-bottom: 10px;
+    }
+  }
+
+  .page-intro__header {
+    padding: 0 23px;
+
+    &--large {
+      margin-top: 85px;
+    }
+  }
+
+  .page-intro__content {
+    &--tiny {
+      margin-bottom: 33px;
+      padding: 0;
+    }
+  }
+}
