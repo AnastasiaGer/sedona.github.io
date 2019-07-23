@@ -51,3 +51,74 @@
   color: #000000;
   text-decoration: none;
 }
+/**
+  * ===========================================================
+  * PAGE FOOTER tablet
+  * ===========================================================
+*/
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    .clearfix();
+  }
+
+  .page-footer__header {
+    vertical-align: top;
+
+    margin: 25px 0;
+
+    width: 235px;
+
+    text-align: left;
+  }
+
+  .page-footer__social {
+    vertical-align: top;
+
+    width: 156px;
+    margin: 10px 10px;
+    margin-left: 10px;
+  }
+
+  .page-footer__copyright {
+    vertical-align: top;
+
+    float: right;
+
+    margin: 0;
+    margin-top: 19px;
+
+    width: 228px;
+
+    text-align: right;
+  }
+}
+
+
+/**
+    * ===========================================================
+    * PAGE FOOTER desktop
+    * ===========================================================
+*/
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding: 20px 43px;
+    padding-left: 131px;
+  }
+
+  .page-footer__header {
+    width: 375px;
+  }
+
+  .page-footer__social {
+    margin: 10px 15px;
+  }
+
+  .page-footer__copyright {
+    width: 278px;
+  }
+}
