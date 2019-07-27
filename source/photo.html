@@ -29,13 +29,23 @@
           </li>
         </ul>
         <div class="main-nav__control">
-          <button class="main-nav__btn main-nav__btn-open hidden" type="button">
-            Открыть меню
-          </button>
-          <button class="main-nav__btn main-nav__btn-close  main-nav__btn-close" type="button">
-            Закрыть меню
-          </button>
-        </div>
+            <button class="main-nav__btn main-nav__btn-open" type="button">
+                <svg class="main-nav__btn-icon  main-nav__btn-icon--menu" width="23" height="21" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
+                  <g>
+                    <rect width="22.928" height="3.964"/>
+                    <rect y="9.009" width="22.928" height="3.964"/>
+                    <rect y="18.018" width="22.928" height="3.964"/>
+                  </g>
+                </svg>
+              Открыть меню
+            </button>
+            <button class="main-nav__btn main-nav__btn-close" type="button">
+                <svg class="main-nav__btn-icon  main-nav__btn-icon--cross" width="25" height="23" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+                  <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
+                </svg>
+              Закрыть меню
+            </button>
+          </div>
       </nav>
       <div class="page-header__logo page-header__logo--tiny">
         <a href="index.html">
@@ -145,7 +155,7 @@
 
     <footer class="page-footer">
       <h2 class="page-footer__header">#visitsedona</h2>
-      <p class="page-footer__social">
+      <div class="page-footer__social">
         <span class="social-links">
           <a class="social-link" href="http://twitter.com">
             Мы в Твиттере
@@ -157,7 +167,7 @@
             Мы на Ютубе
           </a>
         </span>
-      </p>
+      </div>
 
       <p class="page-footer__copyright">
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
@@ -167,6 +177,8 @@
     </footer>
 
   </div>
+
+  <script src="app.js"></script>
 
 </body>
 
