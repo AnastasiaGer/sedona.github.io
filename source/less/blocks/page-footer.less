@@ -5,8 +5,15 @@
   */
 .page-footer {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: @mobile-width;
+
+  padding: 23px 80px;
+  margin: 0 auto;
 
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: normal;
@@ -16,7 +23,8 @@
 }
 
 .page-footer__header {
-  margin-bottom: 32px;
+  margin-bottom: 29px;
+  padding-left: 10px;
 
   font-size: 21px;
   line-height: 26px;
@@ -51,6 +59,19 @@
   &:active {
     background-color: #5496bd;
   }
+
+  &:active .social-link__icon {
+    fill: #88b6d1;
+  }
+}
+
+.social-link__icon {
+  .absolute-top-left(50%, 50%, 18px, 18px);
+
+  margin-top: -9px;
+  margin-left: -9px;
+
+  fill: #ffffff;
 }
 
 .page-footer__copyright {
@@ -72,13 +93,34 @@
   display: inline-block;
   position: relative;
 
-  padding-top: 5px;
+  padding-top: 7px;
   padding-bottom: 10px;
-  padding-right: 100px;
+  padding-right: 40px;
 
   color: #000000;
   text-decoration: none;
 }
+
+.page-footer__copyright-icon {
+  position: absolute;
+
+  top: 2px;
+  right: -8px;
+
+  width: 44px;
+  height: 34px;
+
+  cursor: pointer;
+
+  &:hover {
+    fill: #81b3d2;
+  }
+
+  &:active {
+    fill: #b2b2b2;
+  }
+}
+
 /**
   * ===========================================================
   * PAGE FOOTER tablet
@@ -136,7 +178,7 @@
   .page-footer {
     width: @desktop-width;
 
-    padding: 24px 122px;
+    padding: 23px 120px;
   }
 
   .page-footer__social {
