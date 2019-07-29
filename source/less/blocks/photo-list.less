@@ -6,6 +6,8 @@
 .photo-list {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 21px 20px 0 20px;
 
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: normal;
@@ -17,10 +19,8 @@
 
 .photo-list__item {
   margin: 0 auto;
-  padding: 20px;
-  padding-top: 22px;
   padding-bottom: 9px;
-
+  margin-bottom: 15px;
 
   font-size: 14px;
   line-height: 24px;
@@ -31,6 +31,16 @@
   & img {
     display: block;
   }
+}
+
+.photo-list__item:last-child {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.photo-item {
+  width: 280px;
+  height: 280px;
 }
 
 .photo-list__item-caption {
@@ -68,7 +78,8 @@
 
   margin: 0;
   padding: 0;
-  padding-left: 33px;
+  padding-top: 8px;
+  padding-left: 36px;
   min-width: 70px;
   height: 40px;
 
