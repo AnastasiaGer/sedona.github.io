@@ -71,7 +71,7 @@
   padding: 0;
 }
 
-.photo-list__like-icon {
+.photo-list__like {
   position: relative;
 
   align-self: flex-start;
@@ -93,6 +93,14 @@
   background: none;
   outline: none;
 }
+
+.photo-list__like-icon {
+  .absolute-top-left(7px, 0, 23px, 21px);
+
+  fill: #ffffff;
+  opacity: 0.3;
+}
+
 /**
   * ===========================================================
   * PHOTOS SECTION tablet
@@ -176,7 +184,7 @@
     text-overflow: ellipsis;
   }
 
-  .photo-list__like-icon {
+  .photo-list__like {
     margin-top: 5px;
     margin-right: 10px;
 
@@ -184,6 +192,14 @@
     min-width: 0;
 
     text-align: left;
+  }
+
+  .photo-list__like-icon {
+    top: 5px;
+    left: 5px;
+
+    fill: #ffffff;
+    opacity: 0.3;
   }
 }
 
@@ -251,12 +267,20 @@
     width: 280px;
   }
 
-  .photo-list__like-icon {
+  .photo-list__like {
     color: #ffffff;
     margin-right: 19px;
   }
 
-  .photo-list__like-icon--road {
+  .photo-list__like--road {
     margin-right: 27px;
+  }
+
+  .photo-list__like-icon {
+    color: #ffffff;
+
+    &::before {
+      filter: brightness(0%) invert(100%);
+    }
   }
 }
