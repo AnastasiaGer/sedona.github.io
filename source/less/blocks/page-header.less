@@ -13,15 +13,37 @@
 
   height: 388px;
 
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 768px auto;
+
   &--tiny {
     height: 156px;
     background-size: 768px auto;
     background-position: center bottom;
   }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 320px;
+    height: 26px;
+
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    z-index: 100;
+  }
 }
 
 .page-header__top-logo {
-
   position: absolute;
 
   top: -57px;
@@ -62,6 +84,7 @@
   background-color: transparent;
   z-index: 100;
 }
+
 /**
   * ===========================================================
   * PAGE HEADER tablet
@@ -76,8 +99,10 @@
   }
 
   .page-header__logo {
-    order: 2;
-    height: 518px;
+    height: 519px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: 768px auto;
 
     &--tiny {
       height: 290px;
@@ -85,6 +110,13 @@
 
     &--tiny .page-header__bg-image {
       margin-top: -228px;
+    }
+
+    &::after {
+      width: 768px;
+      height: 57px;
+
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
     }
   }
 
@@ -99,7 +131,6 @@
   }
 
   .page-header__top-logo {
-
     position: absolute;
 
     top: -56px;
@@ -114,7 +145,6 @@
   }
 
   .page-header__title-image {
-
     .img-x-center(460px);
 
     top: 78px;
@@ -144,7 +174,15 @@
   }
 
   .page-header__logo {
-    height: 518px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: 1200px auto;
+
+    &::after {
+      width: 1200px;
+      height: 57px;
+
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
 
     &--tiny {
       height: 301px;
@@ -153,24 +191,23 @@
     &--tiny .page-header__bg-image {
       margin-top: -210px;
     }
+  }
 
-    .page-header__top-logo {
+  .page-header__top-logo {
+    position: absolute;
 
-      position: absolute;
+    top: -56px;
+    left: 50%;
 
-      top: -56px;
-      left: 50%;
+    margin-left: -94px;
 
-      margin-left: -94px;
+    width: 187px;
+    height: 96px;
 
-      width: 187px;
-      height: 96px;
+    z-index: 100;
+  }
 
-      z-index: 100;
-    }
-
-    .page-header__logo-text {
-      margin-top: 73px;
-    }
+  .page-header__logo-text {
+    margin-top: 73px;
   }
 }

@@ -5,7 +5,7 @@
   */
 .page-intro {
   position: relative;
-  padding: 19px 18px;
+  padding: 19px 25px;
   padding-bottom: 25px;
 
   background-color: #ffffff;
@@ -13,7 +13,7 @@
   &--tiny {
     padding: 20px;
     padding-bottom: 16px;
-    margin-bottom: -1px;
+    margin-bottom: 1px;
   }
 }
 
@@ -29,8 +29,8 @@
 }
 
 .page-intro__content {
-  margin: 28px 0;
-  margin-bottom: 0;
+  margin: 0;
+  margin-top: 28px;
 
   font-size: 14px;
   line-height: 26px;
@@ -41,12 +41,16 @@
   &--tiny {
     padding: 0;
 
+    margin-top: 26px;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
   }
 }
 
+.page-intro__content br {
+  display: none;
+}
 /**
   * ===========================================================
   * PAGE INTRO tablet
@@ -87,6 +91,10 @@
       padding: 0 45px;
     }
   }
+
+  .page-intro__content br {
+    display: inline;
+  }
 }
 
 /**
@@ -122,5 +130,9 @@
       padding: 0 33px;
       padding-top: 2px;
     }
+  }
+
+  .page-intro__content br {
+    display: inline;
   }
 }

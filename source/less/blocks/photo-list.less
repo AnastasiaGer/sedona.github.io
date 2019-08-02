@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 22px 20px 0 20px;
+  padding: 25px 20px 0 20px;
 
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: normal;
@@ -186,17 +186,28 @@
 
   .photo-list__like {
     margin-top: 5px;
-    margin-right: 10px;
 
     height: 35px;
     min-width: 0;
 
     text-align: left;
+
+    &--four {
+      margin-right: 10px;
+    }
+
+    &--three {
+      margin-right: 20px;
+    }
+
+    &--two {
+      margin-right: 26px;
+    }
   }
 
   .photo-list__like-icon {
-    top: 5px;
-    left: 5px;
+    top: 7px;
+    left: 3px;
 
     fill: #ffffff;
     opacity: 0.3;
@@ -269,15 +280,26 @@
 
   .photo-list__like {
     color: #ffffff;
-    margin-right: 19px;
-  }
 
-  .photo-list__like--road {
-    margin-right: 27px;
+    &--four {
+      margin-right: 11px;
+    }
+
+    &--three {
+      margin-right: 19px;
+    }
+
+    &--two {
+      margin-right: 27px;
+    }
   }
 
   .photo-list__like-icon {
     color: #ffffff;
+
+    path {
+      fill: #ffffff;
+    }
 
     &::before {
       filter: brightness(0%) invert(100%);
