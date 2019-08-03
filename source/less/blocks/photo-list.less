@@ -97,8 +97,10 @@
 .photo-list__like-icon {
   .absolute-top-left(7px, 0, 23px, 21px);
 
-  fill: #ffffff;
-  opacity: 0.3;
+  path {
+    fill: #000000;
+    opacity: 0.3;
+  }
 }
 
 /**
@@ -209,8 +211,10 @@
     top: 7px;
     left: 3px;
 
-    fill: #ffffff;
-    opacity: 0.3;
+    path {
+      fill: #000000;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -294,15 +298,8 @@
     }
   }
 
-  .photo-list__like-icon {
-    color: #ffffff;
-
-    path {
-      fill: #ffffff;
-    }
-
-    &::before {
-      filter: brightness(0%) invert(100%);
-    }
+  .photo-list__like-icon path {
+    fill: #ffffff;
+    opacity: 1;
   }
 }
