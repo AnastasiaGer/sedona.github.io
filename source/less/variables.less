@@ -1,9 +1,13 @@
 @page-max-width: 1200px;
 @page-min-width: 320px;
 
-@mobile-width: 320px;
-@tablet-width: 768px;
-@desktop-width: 1200px;
+@mobile-max-width: 320px;
+@tablet-max-width: 768px;
+@desktop-max-width: 1200px;
+
+@mobile-widths: ~"(min-width: 320px)";
+@tablet-widths: ~"(min-width: 768px)";
+@desktop-widths: ~"(min-width: 1200px)";
 
 @only-mobile-widths: ~"(max-width: 320px)";
 @only-tablet-widths: ~"(min-width: 768px) and (max-width: 1200px)";
