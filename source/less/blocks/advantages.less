@@ -64,6 +64,27 @@
   height: 210px;
   padding: 58px 28px 45px 28px;
   text-align: center;
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: -20px;
+    left: -223px;
+
+    width: 766px;
+    height: 37px;
+
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 766px 37px;
+
+    z-index: 100;
+  }
 }
 
 .advantages__big-header {
@@ -289,6 +310,10 @@
     height: 256px;
     padding: 28px 40px 45px 40px;
     text-align: center;
+
+    &::before {
+      display: none;
+    }
   }
 
   .advantages__big-header {
@@ -497,7 +522,7 @@
   .advantages__big-content {
     padding: 0 20px;
     margin-bottom: 23px;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .advantages__big-content br {
@@ -508,11 +533,11 @@
     width: 800px;
 
     &--city {
-      margin-top: -71px;
+      margin-top: -70px;
     }
 
     &--bridge {
-      margin-top: -76px;
+      margin-top: -75px;
     }
   }
 
@@ -563,7 +588,7 @@
   .advantages__gray-content {
     padding-left: 3px;
     padding-right: 5px;
-    margin-top: 12px;
+    margin-top: 11px;
   }
 
   .advantages__gray-content--three {
