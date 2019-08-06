@@ -2,12 +2,21 @@
   * ===========================================================
   * MAIN NAVIGATION mobile
   * ===========================================================
-  */
+*/
+
 .main-nav {
+  position: relative;
+
   font-size: 18px;
   line-height: 40px;
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
+
+  z-index: 100;
+
+  &--nojs .main-nav__btn {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -19,20 +28,9 @@
   overflow: hidden;
 }
 
-.main-nav__item {
-  &:first-child .main-nav__link {
-    box-shadow: inset 0 -1px 0 #678fa8;
-  }
-
-  &:last-child .main-nav__link {
-    box-shadow: inset 0 1px 0 #9ac2db,
-      inset 0 -5px 12px -10px #000000;
-  }
-}
-
 .main-nav__link {
   display: block;
-  padding: 8px 20px;
+  padding: 8px 20px 6px 20px;
 
   text-align: center;
   text-transform: uppercase;
@@ -40,8 +38,9 @@
 
   color: #ffffff;
   background-color: #81b3d2;
-  box-shadow: inset 0 -1px 0 #678fa8,
-    inset 0 1px 0 #9ac2db;
+
+  border-top: 1px solid #678fa8;
+  border-bottom: 1px solid #9ac2db;
 
   &[href]:hover {
     background-color: #669ec0;
@@ -54,18 +53,76 @@
     cursor: pointer;
   }
 }
+
+.main-nav__control {
+  position: relative;
+
+  min-height: 56px;
+  background-color: #ffffff;
+  .clearfix();
+}
+
+.main-nav__btn {
+  position: relative;
+
+  float: right;
+
+  margin: 5px;
+  padding: 0;
+
+  width: 53px;
+  height: 46px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.main-nav__btn-icon {
+  position: absolute;
+
+  &--menu {
+    top: 50%;
+    left: 50%;
+
+    fill: #81b3d2;
+
+    width: 23px;
+    height: 21px;
+
+    margin-top: -12px;
+    margin-left: -12px;
+  }
+
+  &--cross {
+    top: -199px;
+    left: 27px;
+
+    fill: #ffffff;
+
+    width: 23px;
+    height: 22px;
+
+    margin-top: -13.5px;
+    margin-left: -12.5px;
+  }
+}
+
 /**
-  * ===========================================================
-  * MAIN NAVIGATION tablet/desktop
-  * ===========================================================
-  */
-@media (min-width: @tablet-width) {
+    * ===========================================================
+    * MAIN NAVIGATION tablet
+    * ===========================================================
+*/
+
+@media (min-width: @tablet-max-width) {
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;
 
     background-color: #ffffff;
-
     .clearfix();
   }
 
@@ -74,8 +131,7 @@
   }
 
   .main-nav__item {
-
-    width: 20%;
+    width: 153px;
 
     &:nth-child(3) {
       margin-left: auto;
@@ -91,8 +147,7 @@
   }
 
   .main-nav__link {
-    padding: 15px 20px;
-    padding-right: 16px;
+    padding: 15px 16px 15px 19px;
 
     font-size: 14px;
     font-weight: bold;
@@ -101,6 +156,7 @@
     color: #000000;
     background-color: #ffffff;
     box-shadow: none;
+    border: none;
 
     &[href]:hover {
       background-color: #ffffff;
@@ -129,5 +185,16 @@
 
   .main-nav__control {
     display: none;
+  }
+}
+/**
+  * ===========================================================
+  * MAIN NAVIGATION desktop
+  * ===========================================================
+*/
+
+@media (min-width: @desktop-max-width) {
+  .main-nav__item {
+    width: 239px;
   }
 }

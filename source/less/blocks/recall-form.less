@@ -29,7 +29,7 @@
   box-sizing: border-box;
   position: relative;
 
-  padding: 16px 20px;
+  padding: 16px 22px;
 
   width: 100%;
   min-width: 100px;
@@ -82,7 +82,7 @@
   overflow: hidden;
 
   &--tel {
-    display: block;
+    /*display: block;*/
 
     padding: 7px 20px;
 
@@ -147,8 +147,8 @@
   */
 .recall-form__id {
 
-  margin: 64px 0;
-  margin-bottom: 26px;
+  margin: 65px 0;
+  margin-bottom: 25px;
 
   padding: 0;
 
@@ -165,7 +165,7 @@
 .recall-form__id-label {
   align-self: center;
 
-  margin-right: 20px;
+  margin-right: 14px;
   font-size: 14px;
   line-height: 26px;
 
@@ -184,7 +184,7 @@
 
   margin: 0;
   margin-top: 58px;
-  margin-bottom: 28px;
+  margin-bottom: 23px;
   padding: 0;
 
   list-style: none;
@@ -198,13 +198,13 @@
 .recall-form__contacts-item input[type="tel"],
 .recall-form__contacts-item input[type="email"] {
   padding-right: 78px;
+  margin-bottom: 7px;
 }
 
 .recall-form__contacts-label {
   display: block;
 
-  margin: 5px 20px;
-  margin-bottom: 7px;
+  margin: 6px 20px;
 }
 
 .recall-form__contacts-input {
@@ -231,12 +231,13 @@
 
 /**
     * ===========================================================
+    *  RECALL FORM interview
     * ===========================================================
 */
 
 .recall-form__interview {
   margin: 65px 0;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 
   padding: 0;
 
@@ -321,15 +322,21 @@
 
 /**
     * ===========================================================
-    * ===========================================================
+    * RECALL FORM visited
+    *
+    ===========================================================
 */
 
 .recall-form__visited {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   margin: 0;
   padding: 0;
 
-  margin-top: 85px;
-  margin-bottom: 27px;
+  margin-top: 88px;
 
   width: 100%;
 
@@ -354,16 +361,76 @@
   min-width: 280px;
 }
 
+.recall-form__checkbox-control {
+  cursor: pointer;
+
+  line-height: 26px;
+
+  &:hover .recall-form__checkbox-icon {
+    background-color: #e5e5e5;
+  }
+
+  &:active .recall-form__checkbox-icon {
+    background-color: #d5d5d5;
+  }
+
+  &:active .recall-form__checkbox-icon-tick {
+    fill: #a4a4a4;
+  }
+}
+
+.recall-form__checkbox-icon {
+  .absolute-top-left(-2px, 0, 56px, 56px);
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.recall-form__checkbox-icon-tick {
+  display: none;
+
+  position: absolute;
+
+  top: 20px;
+  left: 16px;
+
+  width: 23px;
+  height: 20px;
+}
+
+.recall-form input[type="checkbox"] {
+  &:checked + .recall-form__checkbox-icon .recall-form__checkbox-icon-tick {
+    display: inline-block;
+  }
+
+  &:disabled + .recall-form__checkbox-icon {
+    background-color: #d5d5d5;
+  }
+
+  &:disabled + .recall-form__checkbox-icon .recall-form__checkbox-icon-tick {
+    display: none;
+    fill: #a4a4a4;
+  }
+}
+
+.recall-form__checkbox-label {
+  display: block;
+
+  padding: 13px 0;
+  padding-left: 80px;
+}
+
 /**
     * ===========================================================
-    * ===========================================================
+    * RECALL FORM message-wrap
+    *
+    ===========================================================
 */
 
 .recall-form__message-wrap {
   padding: 0;
 
   margin: 62px 20px;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .recall-form__message-input {
@@ -391,10 +458,374 @@
   color: #000000;
 }
 
-.recall-form__wran-message {
+.recall-form__wrap-message {
   display: none;
 }
 
 .recall-form__btn {
   width: 280px;
+}
+/**
+  * ===========================================================
+  * RECALL FORM tablet
+  * ===========================================================
+  */
+
+@media (min-width: @tablet-max-width) {
+  .recall-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 50px;
+    padding-top: 5px;
+    padding-bottom: 53px;
+  }
+
+  .recall-form__invalid-msg {
+    &--tel {
+      position: absolute;
+
+      top: -40px;
+      right: -20px;
+
+      width: 350px;
+
+      text-align: right;
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .recall-form__section {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    width: 648px;
+
+    border: none;
+
+    &--id {
+      display: flex;
+      justify-content: flex-end;
+
+      order: 2;
+
+      box-sizing: border-box;
+      margin: 0;
+      margin-left: 54px;
+
+      width: 280px;
+    }
+
+    &--contacts {
+      order: 3;
+      margin-top: 52px;
+      width: 100%;
+    }
+
+    &--interview {
+      order: 1;
+
+      margin: 0;
+      width: 334px;
+
+      border: none;
+    }
+
+    &--visited {
+      order: 4;
+      margin-top: 17px;
+      width: 100%;
+    }
+
+    &--message {
+      order: 5;
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+
+  .recall-form__title {
+    top: 0;
+    left: 0;
+
+    margin-left: 0;
+    padding-left: 7px;
+
+    height: auto;
+
+    font-size: 21px;
+    line-height: 26px;
+
+    text-align: left;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &--highlight {
+      position: relative;
+
+      top: 0;
+      left: 0;
+
+      padding: 0 52px;
+      width: 300px;
+
+      text-align: center;
+      transform: none;
+      overflow: visible;
+      white-space: normal;
+    }
+  }
+
+  .recall-form__contacts-label {
+    margin: 7px 21px;
+  }
+
+  .recall-form__radio-label {
+    padding-left: 75px;
+  }
+
+  .recall-form__id {
+    margin-top: 100px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 270px;
+  }
+
+  .recall-form__id-item {
+    margin: 0;
+    margin-bottom: 18px;
+    padding-top: 2px;
+  }
+
+  .recall-form__id-label {
+    padding-left: 3px;
+  }
+
+  .recall-form__interview {
+    margin-top: 103px;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
+  .recall-form__interview-item {
+    margin-left: 0;
+    margin-bottom: 21px;
+  }
+
+  .recall-form__contacts {
+    margin-top: 18px;
+  }
+
+  .recall-form__contacts-item {
+    position: relative;
+    margin: 0;
+    margin-bottom: 7px;
+  }
+
+  .recall-form__visited {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin: 0 93px;
+    margin-top: 43px;
+  }
+
+  .recall-form__visited-item {
+    display: block;
+    min-width: 260px;
+
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .recall-form__message-wrap {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 57px;
+    margin-bottom: 48px;
+  }
+
+  .recall-form__bottom-wrap {
+    order: 100;
+
+    width: 100%;
+  }
+
+  .recall-form__wrap-message {
+    display: inline-block;
+
+    float: right;
+
+    margin: 20px 0;
+    padding-right: 10px;
+
+    width: 200px;
+
+    text-align: right;
+  }
+
+  .recall-form__btn {
+    order: 6;
+
+    margin: 0 10px;
+    min-width: 325px;
+    padding-left: 64px;
+
+    float: left;
+
+    text-align: left;
+  }
+}
+
+/**
+    * ===========================================================
+    * RECALL FORM desktop
+    * ===========================================================
+*/
+
+@media (min-width: @desktop-max-width) {
+  .recall-form {
+    padding: 0 120px 58px 120px;
+  }
+
+  .recall-form__invalid-msg {
+    &--tel {
+      position: absolute;
+
+      top: -39px;
+      left: 0;
+
+      text-align: left;
+    }
+  }
+
+  .recall-form__section {
+    margin: 0;
+    width: 648px;
+
+    &--id {
+      width: 480px;
+    }
+
+    &--contacts {
+      width: 100%;
+      margin-top: 48px;
+    }
+
+    &--interview {
+      width: 480px;
+    }
+
+    &--visited {
+      width: 100%;
+      margin-top: 17px;
+    }
+
+    &--message {
+      margin-top: 36px;
+    }
+  }
+
+  .recall-form__title {
+    left: 73px;
+
+    &--highlight {
+      top: 1px;
+      left: -4px;
+
+      margin: 0 280px;
+    }
+  }
+
+  .recall-form__id {
+    margin-top: 97px;
+    margin-left: 80px;
+    margin-right: 0;
+    width: 400px;
+  }
+
+  .recall-form__id-label {
+    padding: 0;
+    padding-top: 4px;
+  }
+
+  .recall-form__interview {
+    margin-top: 102px;
+    margin-left: 0;
+    padding-left: 5px;
+  }
+
+  .recall-form__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 27px;
+  }
+
+  .recall-form__contacts-item {
+    display: flex;
+
+    width: 480px;
+    padding-right: 2px;
+    padding-top: 49px;
+  }
+
+  .recall-form__contacts-label {
+    margin: 0;
+    margin-right: 17px;
+
+    line-height: 58px;
+  }
+
+  .recall-form__contacts-input {
+    width: 314px;
+  }
+
+  .recall-form__contacts-item input[type="tel"],
+  .recall-form__contacts-item input[type="email"] {
+    margin-bottom: 4px;
+  }
+
+  .recall-form__visited {
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .recall-form__visited-item {
+    display: inline-block;
+
+    min-width: 170px;
+  }
+
+  .recall-form__checkbox-label {
+    padding-left: 80px;
+    margin-right: 5px;
+  }
+
+  .recall-form__wrap-message {
+    padding: 0;
+  }
+
+  .recall-form__btn {
+    margin: 0;
+    padding-left: 28px;
+
+    min-width: 480px;
+
+    text-align: center;
+  }
 }

@@ -5,14 +5,15 @@
   */
 .page-intro {
   position: relative;
-  padding: 20px 25px;
+  padding: 19px 25px;
   padding-bottom: 25px;
 
   background-color: #ffffff;
 
   &--tiny {
-    padding: 18px 20px;
-    margin-bottom: -1px;
+    padding: 20px;
+    padding-bottom: 16px;
+    margin-bottom: 1px;
   }
 }
 
@@ -28,8 +29,8 @@
 }
 
 .page-intro__content {
-  margin: 25px 0;
-  margin-bottom: 0;
+  margin: 0;
+  margin-top: 28px;
 
   font-size: 14px;
   line-height: 26px;
@@ -38,22 +39,27 @@
   text-transform: uppercase;
 
   &--tiny {
-    margin-bottom: 2px;
+    padding: 0;
 
+    margin-top: 26px;
     font-size: 14px;
+    font-weight: 400;
     line-height: 24px;
   }
 }
 
+.page-intro__content br {
+  display: none;
+}
 /**
   * ===========================================================
   * PAGE INTRO tablet
   * ===========================================================
 */
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-max-width) {
   .page-intro {
-    padding: 28px 139px;
+    padding: 30px 100px;
     padding-bottom: 40px;
 
     &--decorated::after {
@@ -63,7 +69,7 @@
 
   .page-intro__header {
     padding: 0 10px;
-    margin-top: 22px;
+    margin-top: 20px;
 
     font-size: 21px;
     line-height: 26px;
@@ -78,12 +84,16 @@
   }
 
   .page-intro__content {
-    margin-top: 28px;
-    margin-bottom: 11px;
+    margin-top: 30px;
+    margin-bottom: 9px;
 
     &--tiny {
-      padding: 0 80px;
+      padding: 0 45px;
     }
+  }
+
+  .page-intro__content br {
+    display: inline;
   }
 }
 
@@ -93,18 +103,19 @@
     * ===========================================================
 */
 
-@media (min-width: @desktop-width) {
+@media (min-width: @desktop-max-width) {
   .page-intro {
-    padding: 28px 355px;
-    padding-bottom: 40px;
+    padding: 30px 345px;
+    padding-bottom: 38px;
 
     &--tiny {
-      padding-bottom: 10px;
+      padding-bottom: 8px;
     }
   }
 
   .page-intro__header {
     padding: 0 23px;
+    margin-top: 23px;
 
     &--large {
       margin-top: 85px;
@@ -112,9 +123,16 @@
   }
 
   .page-intro__content {
+    margin-top: 27px;
+
     &--tiny {
       margin-bottom: 33px;
-      padding: 0;
+      padding: 0 33px;
+      padding-top: 2px;
     }
+  }
+
+  .page-intro__content br {
+    display: inline;
   }
 }

@@ -6,8 +6,8 @@
 .video {
 
   padding: 0;
-  padding-top: 31px;
-  padding-bottom: 39px;
+  padding-top: 35px;
+  padding-bottom: 40px;
 
   font-size: 14px;
   line-height: 24px;
@@ -21,7 +21,7 @@
 .video__header {
   padding: 0;
   margin: 0 30px;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 
   font-size: 18px;
   line-height: 26px;
@@ -33,7 +33,7 @@
 .video__content {
   padding: 0;
   margin: 0 30px;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 
   text-align: center;
   text-transform: uppercase;
@@ -103,7 +103,6 @@
 }
 
 .video__control-btn {
-
   margin: 0;
   padding: 15px 10px;
 
@@ -132,29 +131,59 @@
     margin-right: 5px;
   }
 }
+
+.video__control-btn-icon path {
+  cursor: pointer;
+  fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #333333;
+    opacity: 0.3;
+  }
+}
+
+.video__control-btn-icon .polygon {
+  cursor: pointer;
+  fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #333333;
+    opacity: 0.3;
+  }
+}
 /**
   * ===========================================================
   * VIDEO tablet
   * ===========================================================
 */
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-max-width) {
   .video {
-    padding: 46px 60px;
+    padding: 47px 60px;
     padding-bottom: 40px;
 
     border: none;
   }
 
   .video__header {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
 
     font-size: 30px;
     line-height: 26px;
   }
 
   .video__content {
-    margin: 0 105px;
+    padding: 0 72px;
   }
 
   .video__item {
@@ -162,7 +191,7 @@
 
     padding: 0;
     margin: 0 auto;
-    margin-top: 74px;
+    margin-top: 73px;
 
     width: 648px;
     height: 500px;
@@ -207,12 +236,13 @@
   }
 
   .video__control-btn {
+    cursor: pointer;
     margin: 0;
     padding: 10px;
 
     background-color: transparent;
 
-    &--repaly {
+    &--replay {
       order: 1;
     }
 
@@ -228,11 +258,41 @@
   }
 
   .video__control-btn-icon {
-    fill: #ffffff;
-
     &--replay {
       width: 23px;
       height: 23px;
+    }
+  }
+
+  .video__control-btn-icon path {
+    cursor: pointer;
+    fill: #ffffff;
+
+    &:hover,
+    &:focus {
+      fill: #ffffff;
+      opacity: 0.6;
+    }
+
+    &:active {
+      fill: #ffffff;
+      opacity: 0.3;
+    }
+  }
+
+  .video__control-btn-icon .polygon {
+    cursor: pointer;
+    fill: #ffffff;
+
+    &:hover,
+    &:focus {
+      fill: #ffffff;
+      opacity: 0.6;
+    }
+
+    &:active {
+      fill: #ffffff;
+      opacity: 0.3;
     }
   }
 }
@@ -243,7 +303,7 @@
     * ===========================================================
 */
 
-@media (min-width: @desktop-width) {
+@media (min-width: @desktop-max-width) {
   .video {
     padding-top: 71px;
     padding-bottom: 85px;
@@ -251,10 +311,11 @@
 
   .video__content {
     margin: 0 320px;
+    padding: 0;
   }
 
   .video__item {
-    margin-top: 72px;
+    margin-top: 69px;
 
     width: 800px;
     height: 500px;
