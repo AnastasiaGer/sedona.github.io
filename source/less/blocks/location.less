@@ -1,6 +1,6 @@
 /**
   * ===========================================================
-  * MAP SECTION
+  * LOCATION mobile
   * ===========================================================
   */
 .location {
@@ -19,4 +19,56 @@
   height: auto;
 
   z-index: 0;
+}
+
+.location__map-frame {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  margin-left: -600px;
+
+  height: 350px;
+  width: 1200px;
+
+  border: 0;
+
+  z-index: 1000;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.location__mark {
+  .absolute-top-left(161px, 146px, 27px, 27px);
+
+  z-index: 100;
+}
+
+/**
+  * ===========================================================
+  * LOCATION tablet
+  * ===========================================================
+*/
+
+@media (min-width: @tablet-max-width) {
+  .location__mark {
+    .absolute-top-left(163px, 370px, 27px, 27px);
+    z-index: 100;
+  }
+}
+
+/**
+  * ===========================================================
+  * LOCATION desktop
+  * ===========================================================
+*/
+
+@media (min-width: @desktop-max-width) {
+  .location__mark {
+    .absolute-top-left(162px, 586px, 27px, 27px);
+    z-index: 100;
+  }
 }
