@@ -435,6 +435,10 @@
   .advantages__gray {
     padding: 30px 0 20px 0;
     width: 256px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .advantages__gray-header {
@@ -566,12 +570,13 @@
   }
 
   .advantages__card-header {
-    margin-top: 16px;
-    padding-left: 5px;
+    margin-top: 14px;
+    padding-left: 4px;
   }
 
   .advantages__card-content {
     margin-top: 14px;
+    letter-spacing: -0.1px;
   }
 
   .advantages__card-content--gift br {
@@ -602,9 +607,9 @@
   }
 
   .advantages__gray-content {
-    padding-left: 3px;
-    padding-right: 5px;
-    margin-top: 11px;
+    padding: 0 3px;
+    margin-top: 10px;
+    letter-spacing: -0.1px;
   }
 
   .advantages__gray-content--three {
@@ -612,7 +617,7 @@
   }
 
   .advantages__gray-content br {
-    display: none;
+    display: inline;
   }
 
   .advantages__card-icon {
@@ -625,7 +630,7 @@
       height: 72px;
 
       top: 61px;
-      left: 162px;
+      left: 161px;
     }
 
     &--gift {
@@ -633,7 +638,7 @@
       height: 75px;
 
       top: 57px;
-      left: 168px;
+      left: 167px;
     }
 
     &--burger {
@@ -641,7 +646,7 @@
       height: 68px;
 
       top: 64px;
-      left: 162px;
+      left: 161px;
     }
   }
 }
