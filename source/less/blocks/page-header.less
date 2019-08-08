@@ -19,6 +19,23 @@
   background-position: center 0;
   background-size: 768px auto;
 
+  &::after {
+    content: "";
+
+    .img-x-center(320px);
+
+    bottom: 0;
+
+    width: 320px;
+    height: 26px;
+
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    z-index: 100;
+  }
+
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
     background-size: 768px auto;
@@ -29,25 +46,6 @@
     height: 156px;
     background-size: 768px auto;
     background-position: center bottom;
-  }
-
-  &::after {
-    content: "";
-
-    position: absolute;
-
-    bottom: 0;
-    left: 0;
-
-    width: 320px;
-    height: 26px;
-
-    background-image: url("../img/bg-intro-triangle-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 320px 27px;
-
-    z-index: 100;
   }
 }
 
@@ -112,6 +110,13 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: 768px auto;
 
+    &::after {
+      width: 768px;
+      height: 57px;
+
+      background-image: url('../img/bg-intro-triangle-tablet.svg');
+    }
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
       background-size: 768px auto;
@@ -123,14 +128,6 @@
 
     &--tiny .page-header__bg-image {
       margin-top: -228px;
-    }
-
-    &::after {
-      width: 768px;
-      height: 56px;
-
-      background-image: url("../img/bg-intro-triangle-tablet.svg");
-      background-size: 768px 57px;
     }
   }
 
@@ -191,17 +188,17 @@
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 1200px auto;
 
+    &::after {
+
+      width: 1200px;
+      height: 57px;
+
+      background-image: url('../img/bg-intro-triangle-desktop.svg');
+    }
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
       background-size: 1200px auto;
-    }
-
-    &::after {
-      width: 1200px;
-      height: 56px;
-
-      background-image: url("../img/bg-intro-triangle-desktop.svg");
-      background-size: 1200px 57px;
     }
 
     &--tiny {

@@ -10,6 +10,23 @@
 
   background-color: #ffffff;
 
+  &--decorated::after {
+    content: "";
+
+    .img-x-center(320px);
+
+    bottom: -19px;
+
+    width: 320px;
+    height: 37px;
+
+    background-image: url('../img/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    z-index: 2;
+  }
+
   &--tiny {
     padding: 20px 15px;
     padding-bottom: 16px;
