@@ -27,10 +27,10 @@
   top: 0;
   left: 50%;
 
-  margin-left: -600px;
+  margin-left: -160px;
 
   height: 350px;
-  width: 1200px;
+  max-width: 100%;
 
   border: 0;
 
@@ -54,6 +54,22 @@
 */
 
 @media (min-width: @tablet-max-width) {
+  .location__map-frame {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    margin-left: -384px;
+
+    height: 350px;
+    max-width: 100%;
+
+    border: 0;
+
+    z-index: 1000;
+  }
+
   .location__mark {
     .absolute-top-left(163px, 370px, 27px, 27px);
     z-index: 100;
@@ -67,6 +83,22 @@
 */
 
 @media (min-width: @desktop-max-width) {
+  .location__map-frame {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    margin-left: -600px;
+
+    height: 350px;
+    max-width: 100%;
+
+    border: 0;
+
+    z-index: 1000;
+  }
+
   .location__mark {
     .absolute-top-left(162px, 586px, 27px, 27px);
     z-index: 100;

@@ -27,7 +27,7 @@
   margin: 0;
 
   color: #ffffff;
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
@@ -172,6 +172,7 @@
 
   font-weight: 400;
   line-height: 21px;
+  letter-spacing: -0.3px;
 }
 
 .advantages__card-content--gift br {
@@ -184,7 +185,7 @@
 
 .advantages__big--two {
   box-sizing: border-box;
-  padding: 41px 30px 23px 30px;
+  padding: 40px 30px 23px 30px;
   text-align: center;
 }
 
@@ -205,6 +206,20 @@
   }
 }
 
+.advantages__gray--four,
+.advantages__gray--five {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    width: 280px;
+    border-top: 1px solid #d6d6d6;
+  }
+}
+
 .advantages__gray-header {
   margin: 4px 10px;
   margin-bottom: 0;
@@ -217,9 +232,8 @@
 .advantages__gray-content {
   font-size: 14px;
   font-weight: 400;
-  margin-top: 7px;
+  margin-top: 8px;
   margin-bottom: 15px;
-  padding: 0 6px;
 }
 
 .advantages__gray-content br {
@@ -387,6 +401,7 @@
   .advantages__card-content {
     text-align: center;
     padding: 7px 20px 5px 15px;
+    letter-spacing: 0.1px;
   }
 
   .advantages__card-content--gift br {
@@ -440,6 +455,7 @@
     margin-top: 10px;
     margin-bottom: 22px;
     padding: 0 40px;
+    letter-spacing: -0.6px;
   }
 
   .advantages__gray-content--four {
