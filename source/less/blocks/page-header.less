@@ -4,29 +4,10 @@
   * ===========================================================
 */
 .page-header {
-  margin: 0;
+  width: 320px;
+
+  margin: 0 auto;
   padding: 0;
-}
-
-.page-header__logo {
-  height: 388px;
-
-  background-color: #396e98;
-  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
-  }
-
-  &--tiny {
-    background-color: #396e98;
-    height: 156px;
-    background-size: 773px auto;
-    background-position: center bottom;
-  }
 }
 
 .page-header__top-logo {
@@ -37,13 +18,30 @@
 
   margin-left: -51px;
 
-  width: 102px;
-  height: 83px;
-
   z-index: 100;
 }
 
-.page-header__logo-text {
+.page-header__banner {
+  height: 388px;
+  background-color: #396e98;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  &--small {
+    background-color: #396e98;
+    height: 156px;
+    background-size: 773px auto;
+    background-position: center bottom;
+  }
+}
+
+.page-header__banner-text {
   .img-x-center(460px);
 
   top: 310px;
@@ -59,7 +57,7 @@
   }
 }
 
-.page-header__title-image {
+.page-header__banner-text--big {
   .img-x-center(321px);
 
   top: 369px;
@@ -84,37 +82,6 @@
     margin: 0 auto;
   }
 
-  .page-header__logo {
-    height: 518px;
-    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
-
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain, cover;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
-    }
-
-    &--tiny {
-      height: 290px;
-    }
-
-    &--tiny .page-header__bg-image {
-      margin-top: -228px;
-    }
-  }
-
-  .page-header__bg-image {
-    position: relative;
-
-    top: 0;
-    left: 0;
-
-    margin: 0;
-    padding: 0;
-  }
-
   .page-header__top-logo {
     position: absolute;
 
@@ -129,7 +96,29 @@
     z-index: 100;
   }
 
-  .page-header__title-image {
+  .page-header__banner {
+    height: 518px;
+
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain, cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
+    }
+
+    &--small {
+      height: 290px;
+    }
+
+    &--small .page-header__bg-image {
+      margin-top: -228px;
+    }
+  }
+
+  .page-header__banner-text--big {
     .img-x-center(460px);
 
     top: 134px;
@@ -140,7 +129,7 @@
     z-index: 1;
   }
 
-  .page-header__logo-text {
+  .page-header__banner-text {
     margin-top: -160px;
     transform: none;
   }
@@ -158,26 +147,6 @@
     margin: 0 auto;
   }
 
-  .page-header__logo {
-    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
-
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain, cover;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
-    }
-
-    &--tiny {
-      height: 301px;
-    }
-
-    &--tiny .page-header__bg-image {
-      margin-top: -210px;
-    }
-  }
-
   .page-header__top-logo {
     position: absolute;
 
@@ -192,7 +161,23 @@
     z-index: 100;
   }
 
-  .page-header__logo-text {
+  .page-header__banner {
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain, cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+    }
+
+    &--small {
+      height: 301px;
+    }
+  }
+
+  .page-header__banner-text {
     margin-top: -152px;
   }
 }
