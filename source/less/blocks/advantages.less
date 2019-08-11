@@ -37,12 +37,45 @@
 
   overflow: hidden;
 
-  &--big {
+  &--city {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
     background-color: #81b3d2;
+
+    min-height: 451px;
+    margin: 0;
+    padding: 58px 25px 286px 15px;
+    background-image: url("../img/main-city-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain, auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-city-mobile@2x.jpg");
+      background-size: contain, 100% 260px;
+    }
+  }
+
+  &--bridge {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    background-color: #81b3d2;
+
+    min-height: 451px;
+    margin: 0;
+    padding: 38px 30px 265px 30px;
+    background-image: url("../img/main-bridge-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-bridge-mobile@2x.jpg");
+      background-size: 100% 260px;
+    }
   }
 
   &--cards {
@@ -59,46 +92,53 @@
   }
 }
 
-.advantages__big--one {
-  box-sizing: border-box;
-  height: 210px;
-  padding: 58px 28px 45px 28px;
-  text-align: center;
+.advantages__big {
+  &--city,
+  &--bridge {
+    box-sizing: border-box;
 
-  position: relative;
+    text-align: center;
+
+    position: relative;
+  }
 }
 
-.advantages__big-header {
+.advantages__city-header {
   margin: 0;
-
+  margin-left: 10px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
 }
 
-.advantages__big-header br {
-  display: none;
-}
-
-.advantages__big-content {
+.advantages__city-content {
   font-size: 14px;
   font-weight: 400;
-  margin-top: 8px;
-  margin-bottom: 15px;
+
+  margin: 8px 0 15px 10px;
 }
 
-.advantages__big-content br {
+.advantages__bridge-header {
+  margin: 0;
+  margin-top: 1px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.advantages__bridge-header br {
   display: none;
 }
 
-.advantages__item-photo--wrap {
-  height: 260px;
-  padding: 0;
+.advantages__bridge-content {
+  font-size: 14px;
+  font-weight: 400;
+
+  margin: 10px 0 15px 0;
 }
 
-.advantages__item-photo {
-  max-width: 100%;
-  height: auto;
+.advantages__bridge-content br {
+  display: none;
 }
 
 .advantages__list--cards {
@@ -148,6 +188,48 @@
   }
 }
 
+.advantages__card-header--house::before {
+  content: "";
+  position: absolute;
+  width: 39px;
+  height: 37px;
+
+  top: 25px;
+  left: 21px;
+
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.advantages__card-header--gift::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 38px;
+
+  top: 17px;
+  left: 25px;
+
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.advantages__card-header--burger::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 35px;
+
+  top: 23px;
+  left: 18px;
+
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .advantages__card-content {
   margin: 0;
 
@@ -163,12 +245,6 @@
   display: none;
 }
 
-.advantages__big--two {
-  box-sizing: border-box;
-  padding: 40px 30px 23px 30px;
-  text-align: center;
-}
-
 .advantages__list--gray {
   display: flex;
   flex-wrap: wrap;
@@ -179,15 +255,21 @@
 }
 
 .advantages__gray {
-  padding: 26px 35px 10px 35px;
+  &--area {
+    padding: 24px 25px 11px 25px;
+  }
 
-  &--five {
+  &--road {
+    padding: 27px 25px 11px 25px;
+  }
+
+  &--tourists {
     padding: 29px 25px 10px 25px;
   }
 }
 
-.advantages__gray--four,
-.advantages__gray--five {
+.advantages__gray--road,
+.advantages__gray--tourists {
   position: relative;
 
   &::after {
@@ -201,56 +283,54 @@
 }
 
 .advantages__gray-header {
-  margin: 4px 10px;
-  margin-bottom: 0;
-
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+
+  &--area {
+    margin: 3px 10px;
+    margin-bottom: 0;
+  }
+
+  &--road {
+    margin: 3px 10px;
+    margin-bottom: 0;
+  }
+
+  &--tourists {
+    margin: 0;
+  }
 }
 
 .advantages__gray-content {
   font-size: 14px;
   font-weight: 400;
+  line-height: 21px;
+
   margin-top: 8px;
   margin-bottom: 15px;
-  padding: 0 6px;
+
+  &--area {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding: 0 6px;
+  }
+
+  &--road {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding: 0 6px;
+  }
+
+  &--tourists {
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
 }
 
-.advantages__gray-content br {
+.advantages__gray-content--road br {
   display: none;
 }
-
-.advantages__card-icon {
-  position: absolute;
-
-  fill: #81b3d2;
-
-  &--house {
-    width: 39px;
-    height: 37px;
-
-    top: 25px;
-    left: 21px;
-  }
-
-  &--gift {
-    width: 32px;
-    height: 38px;
-
-    top: 17px;
-    left: 25px;
-  }
-
-  &--burger {
-    width: 40px;
-    height: 35px;
-
-    top: 23px;
-    left: 18px;
-  }
-}
-
 /**
   * ===========================================================
   * ADVANTAGES SECTION tablet
@@ -269,11 +349,35 @@
 
     overflow: hidden;
 
-    &--big {
+    &--city {
       flex-wrap: nowrap;
 
       width: 100%;
       height: 256px;
+
+      padding: 45px 550px 20px 40px;
+      background-image: url("../img/main-city-tablet@1x.jpg");
+      background-position: right;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/main-city-tablet@2x.jpg");
+        background-size: 512px auto;
+      }
+    }
+
+    &--bridge {
+      flex-wrap: nowrap;
+      width: 100%;
+      height: 256px;
+
+      padding: 45px 40px 20px 550px;
+      background-image: url("../img/main-bridge-tablet@1x.jpg");
+      background-position: left;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/main-bridge-tablet@2x.jpg");
+        background-size: 512px auto;
+      }
     }
 
     &--cards {
@@ -300,18 +404,14 @@
     }
   }
 
-  .advantages__big--one {
+  .advantages__big--city {
     width: 256px;
     height: 256px;
     padding: 28px 40px 45px 40px;
     text-align: center;
-
-    &::before {
-      display: none;
-    }
   }
 
-  .advantages__big-header {
+  .advantages__city-header {
     margin: 18px 0;
     margin-bottom: 0;
 
@@ -320,11 +420,7 @@
     line-height: 26px;
   }
 
-  .advantages__big-header br {
-    display: inline;
-  }
-
-  .advantages__big-content {
+  .advantages__city-content {
     font-size: 14px;
     font-weight: 400;
     margin-top: 9px;
@@ -332,7 +428,37 @@
     padding: 0 5px;
   }
 
-  .advantages__big-content br {
+  .advantages__big--bridge {
+    order: 1;
+
+    height: 256px;
+    width: 256px;
+    padding: 28px 40px 45px 40px;
+    text-align: center;
+  }
+
+  .advantages__bridge-header {
+    margin: 18px 0;
+    margin-bottom: 0;
+
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+
+  .advantages__bridge-header br {
+    display: inline;
+  }
+
+  .advantages__bridge-content {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 9px;
+    margin-bottom: 21px;
+    padding: 0 5px;
+  }
+
+  .advantages__bridge-content br {
     display: none;
   }
 
@@ -348,6 +474,7 @@
   }
 
   .advantages__card {
+    position: relative;
     box-sizing: border-box;
     padding: 145px 25px 55px 30px;
 
@@ -379,6 +506,36 @@
     text-align: center;
   }
 
+  .advantages__card-header--house::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+
+    top: 61px;
+    left: 90px;
+  }
+
+  .advantages__card-header--gift::before {
+    content: "";
+    position: absolute;
+    width: 64px;
+    height: 75px;
+
+    top: 57px;
+    left: 95px;
+  }
+
+  .advantages__card-header--burger::before {
+    content: "";
+    position: absolute;
+    width: 77px;
+    height: 68px;
+
+    top: 64px;
+    left: 89px;
+  }
+
   .advantages__card-content {
     text-align: center;
     padding: 9px 20px 5px 15px;
@@ -390,15 +547,6 @@
 
   .advantages__card-content--burger br {
     display: inline;
-  }
-
-  .advantages__big--two {
-    order: 1;
-
-    height: 256px;
-    width: 256px;
-    padding: 28px 40px 45px 40px;
-    text-align: center;
   }
 
   .advantages__list--gray {
@@ -422,72 +570,58 @@
   }
 
   .advantages__gray-header {
-    margin: 15px 0;
-    margin-bottom: 0;
-    padding: 0 55px;
+    &--area {
+      margin: 15px 0;
+      margin-bottom: 0;
+      padding: 0 55px;
 
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 26px;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 26px;
+    }
+
+    &--road {
+      margin: 15px 0;
+      margin-bottom: 0;
+      padding: 0 55px;
+
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 26px;
+    }
+
+    &--tourists {
+      margin: 15px 0;
+      margin-bottom: 0;
+      padding: 0 55px;
+
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 26px;
+    }
   }
 
-  .advantages__gray-content br {
+  .advantages__gray-content--road br {
     display: inline;
   }
 
   .advantages__gray-content {
-    margin-top: 10px;
-    margin-bottom: 22px;
-    padding: 0 40px;
-  }
-
-  .advantages__gray-content--four {
-    padding: 0 50px;
-  }
-
-  .advantages__item-photo {
-    position: relative;
-
-    top: 0;
-    left: 0;
-
-    margin: 0;
-    padding: 0;
-
-    max-width: 100%;
-    width: 512px;
-    height: auto;
-
-    transform: none;
-  }
-
-  .advantages__card-icon {
-    position: absolute;
-
-    fill: #81b3d2;
-
-    &--house {
-      width: 75px;
-      height: 72px;
-
-      top: 61px;
-      left: 90px;
+    &--area {
+      margin-top: 10px;
+      margin-bottom: 22px;
+      padding: 0 40px;
     }
 
-    &--gift {
-      width: 64px;
-      height: 75px;
-
-      top: 57px;
-      left: 95px;
+    &--road {
+      margin-top: 10px;
+      margin-bottom: 22px;
+      padding: 0 50px;
     }
 
-    &--burger {
-      width: 77px;
-      height: 68px;
-
-      top: 64px;
-      left: 89px;
+    &--tourists {
+      margin-top: 10px;
+      margin-bottom: 22px;
+      padding: 0 40px;
     }
   }
 }
@@ -499,6 +633,31 @@
 
 @media (min-width: @desktop-max-width) {
   .advantages__item {
+    &--city {
+      width: 100%;
+      padding: 53px 860px 50px 60px;
+      background-image: url("../img/main-city-desktop@1x.jpg");
+      background-position: right;
+      background-size: auto;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/main-city-desktop@2x.jpg");
+        background-size: 800px auto;
+      }
+    }
+
+    &--bridge {
+      width: 100%;
+      padding: 53px 60px 50px 860px;
+      background-image: url("../img/main-bridge-desktop@1x.jpg");
+      background-position: left;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/main-bridge-desktop@2x.jpg");
+        background-size: 800px auto;
+      }
+    }
+
     &--cards {
       min-height: 330px;
     }
@@ -508,36 +667,40 @@
     }
   }
 
-  .advantages__big--one,
-  .advantages__big--two {
-    width: 400px;
-    padding: 36px 40px 45px 40px;
+  .advantages__big {
+    &--city,
+    &--bridge {
+      width: 400px;
+      padding: 36px 40px 45px 40px;
+    }
   }
 
-  .advantages__big-header {
+  .advantages__city-header {
     padding: 0 55px;
   }
 
-  .advantages__big-content {
+  .advantages__city-content {
     padding: 0 20px;
     margin-bottom: 23px;
     margin-top: 8px;
   }
 
-  .advantages__big-content br {
+  .advantages__bridge-header {
+    padding: 0 55px;
+  }
+
+  .advantages__bridge-header br {
     display: inline;
   }
 
-  .advantages__item-photo {
-    width: 800px;
+  .advantages__bridge-content {
+    padding: 0 20px;
+    margin-bottom: 23px;
+    margin-top: 8px;
+  }
 
-    &--city {
-      margin-top: -70px;
-    }
-
-    &--bridge {
-      margin-top: -75px;
-    }
+  .advantages__bridge-content br {
+    display: inline;
   }
 
   .advantages__card {
@@ -551,6 +714,36 @@
   .advantages__card-header {
     margin-top: 14px;
     padding-left: 4px;
+  }
+
+  .advantages__card-header--house::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+
+    top: 61px;
+    left: 161px;
+  }
+
+  .advantages__card-header--gift::before {
+    content: "";
+    position: absolute;
+    width: 64px;
+    height: 75px;
+
+    top: 57px;
+    left: 167px;
+  }
+
+  .advantages__card-header--burger::before {
+    content: "";
+    position: absolute;
+    width: 77px;
+    height: 68px;
+
+    top: 64px;
+    left: 161px;
   }
 
   .advantages__card-content {
@@ -575,55 +768,55 @@
   }
 
   .advantages__gray-header {
-    margin: 15px 0;
-    margin-bottom: 0;
-    padding: 0 65px;
+    &--area {
+      margin: 15px 0;
+      margin-bottom: 0;
+      padding: 0 65px;
 
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 26px;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 26px;
+    }
+
+    &--road {
+      margin: 15px 0;
+      margin-bottom: 0;
+      padding: 0 65px;
+
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 26px;
+    }
+
+    &--tourists {
+      margin: 15px 0;
+      margin-bottom: 0;
+      padding: 0 65px;
+
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 26px;
+    }
   }
 
   .advantages__gray-content {
-    padding: 0 3px;
-    margin-top: 10px;
+    &--area {
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    &--road {
+      padding: 0 3px;
+      margin-top: 10px;
+    }
+
+    &--tourists {
+      padding: 0 3px;
+      margin-top: 10px;
+    }
   }
 
-  .advantages__gray-content--three {
-    padding: 0;
-  }
-
-  .advantages__gray-content br {
+  .advantages__gray-content--road br {
     display: inline;
-  }
-
-  .advantages__card-icon {
-    position: absolute;
-
-    fill: #81b3d2;
-
-    &--house {
-      width: 75px;
-      height: 72px;
-
-      top: 61px;
-      left: 161px;
-    }
-
-    &--gift {
-      width: 64px;
-      height: 75px;
-
-      top: 57px;
-      left: 167px;
-    }
-
-    &--burger {
-      width: 77px;
-      height: 68px;
-
-      top: 64px;
-      left: 161px;
-    }
   }
 }

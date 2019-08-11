@@ -10,18 +10,9 @@
   padding: 0;
 }
 
-.page-header__top-logo {
-  position: absolute;
-
-  top: 223px;
-  left: 50%;
-
-  margin-left: -51px;
-
-  z-index: 100;
-}
-
 .page-header__banner {
+  position: relative;
+
   height: 388px;
   background-color: #396e98;
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
@@ -41,10 +32,24 @@
   }
 }
 
+.page-header__top-logo {
+  position: absolute;
+
+  top: 223px;
+  left: 50%;
+
+  margin-left: -51px;
+
+  width: 102px;
+  height: 83px;
+
+  z-index: 100;
+}
+
 .page-header__banner-text {
   .img-x-center(460px);
 
-  top: 310px;
+  top: 30px;
 
   width: 458px;
   height: 78px;
@@ -60,7 +65,7 @@
 .page-header__banner-text--big {
   .img-x-center(321px);
 
-  top: 369px;
+  top: 88px;
 
   width: 320px;
   height: 215px;
@@ -82,20 +87,6 @@
     margin: 0 auto;
   }
 
-  .page-header__top-logo {
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    margin-left: -51px;
-
-    width: 102px;
-    height: 84px;
-
-    z-index: 100;
-  }
-
   .page-header__banner {
     height: 518px;
 
@@ -112,16 +103,26 @@
     &--small {
       height: 290px;
     }
+  }
 
-    &--small .page-header__bg-image {
-      margin-top: -228px;
-    }
+  .page-header__top-logo {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    margin-left: -51px;
+
+    width: 102px;
+    height: 84px;
+
+    z-index: 100;
   }
 
   .page-header__banner-text--big {
     .img-x-center(460px);
 
-    top: 134px;
+    top: 78px;
 
     width: 460px;
     height: 350px;
@@ -130,7 +131,7 @@
   }
 
   .page-header__banner-text {
-    margin-top: -160px;
+    margin-top: 66px;
     transform: none;
   }
 }
@@ -145,20 +146,6 @@
     width: @desktop-max-width;
 
     margin: 0 auto;
-  }
-
-  .page-header__top-logo {
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    margin-left: -94px;
-
-    width: 187px;
-    height: 96px;
-
-    z-index: 100;
   }
 
   .page-header__banner {
@@ -177,7 +164,21 @@
     }
   }
 
+  .page-header__top-logo {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    margin-left: -94px;
+
+    width: 187px;
+    height: 96px;
+
+    z-index: 100;
+  }
+
   .page-header__banner-text {
-    margin-top: -152px;
+    margin-top: 73px;
   }
 }
