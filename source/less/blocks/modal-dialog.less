@@ -1,8 +1,9 @@
 /**
-  * ===========================================================
-  * MODAL DIALOGS
-  * ===========================================================
-  */
+* ===========================================================
+* MODAL DIALOGS
+* ===========================================================
+*/
+
 .modal-dialog {
   display: none;
 
@@ -18,18 +19,36 @@
 
   font-size: 14px;
   line-height: 24px;
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   color: #000000;
 
   background-color: #f2f2f2;
-  box-shadow: 0 10px 35px -20px rgba(0, 0, 0, 0.7),
-    0 0 15px -20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 35px -20px rgba(0, 0, 0, 0.7), 0 0 15px -20px rgba(0, 0, 0, 0.7);
   transform: translate(-50%, -50%);
 
   overflow: hidden;
 
   text-align: center;
+
+  z-index: 500;
+
+  &--failure .modal-dialog__wrap {
+    padding-bottom: 32px;
+  }
+
+  &--success .modal-dialog__wrap {
+    padding-bottom: 30px;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+    animation: zoomin 0.5s;
+  }
 }
 
 .modal-dialog__wrap {

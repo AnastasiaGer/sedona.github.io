@@ -5,14 +5,37 @@
   */
 .page-intro {
   position: relative;
-  padding: 19px 25px;
-  padding-bottom: 25px;
+  padding: 20px 25px;
+  padding-bottom: 24px;
 
   background-color: #ffffff;
 
-  &--tiny {
+  &--decorated::after {
+    content: "";
+
+    .img-x-center(320px);
+
+    bottom: -17px;
+
+    width: 320px;
+    height: 37px;
+
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    z-index: 2;
+  }
+
+  &--photo {
+    padding: 20px 25px;
+    padding-bottom: 24px;
+  }
+
+  &--form {
     padding: 20px;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
   }
 }
 
@@ -29,7 +52,7 @@
 
 .page-intro__content {
   margin: 0;
-  margin-top: 28px;
+  margin-top: 27px;
 
   font-size: 14px;
   line-height: 26px;
@@ -37,7 +60,16 @@
   text-align: center;
   text-transform: uppercase;
 
-  &--tiny {
+  &--photo {
+    padding: 0;
+
+    margin-top: 26px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &--form {
     padding: 0;
 
     margin-top: 26px;
@@ -75,7 +107,7 @@
     font-weight: bold;
 
     &--large {
-      margin-top: 47px;
+      margin-top: 45px;
 
       font-size: 30px;
       line-height: 26px;
@@ -83,11 +115,19 @@
   }
 
   .page-intro__content {
-    margin-top: 30px;
+    margin-top: 29px;
     margin-bottom: 9px;
 
-    &--tiny {
+    &--photo {
       padding: 0 45px;
+      margin-top: 31px;
+      margin-bottom: 10px;
+    }
+
+    &--form {
+      padding: 0 45px;
+      margin-top: 31px;
+      margin-bottom: 9px;
     }
   }
 
@@ -105,29 +145,41 @@
 @media (min-width: @desktop-max-width) {
   .page-intro {
     padding: 30px 345px;
-    padding-bottom: 38px;
+    padding-bottom: 20px;
 
-    &--tiny {
-      padding-bottom: 8px;
+    &--photo {
+      padding-bottom: 38px;
+    }
+
+    &--form {
+      padding-bottom: 38px;
     }
   }
 
   .page-intro__header {
     padding: 0 23px;
-    margin-top: 23px;
+    margin-top: 22px;
 
     &--large {
-      margin-top: 85px;
+      margin-top: 82px;
+      margin-bottom: 30px;
     }
   }
 
   .page-intro__content {
     margin-top: 27px;
+    margin-bottom: 30px;
 
-    &--tiny {
+    &--photo {
       margin-bottom: 33px;
       padding: 0 33px;
       padding-top: 2px;
+    }
+
+    &--form {
+      margin: 0;
+      margin-bottom: 5px;
+      padding: 0 33px;
     }
   }
 

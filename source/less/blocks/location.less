@@ -1,22 +1,63 @@
 /**
   * ===========================================================
-  * MAP SECTION
+  * LOCATION mobile
   * ===========================================================
   */
 .location {
   position: relative;
-}
 
-.location__map--wrap {
   height: 350px;
-
-  margin: 0;
-  padding: 0;
 }
 
 .location__map {
+  padding: 0;
   max-width: 100%;
   height: auto;
 
   z-index: 0;
+}
+
+.location__map-frame {
+  height: 350px;
+  max-width: 100%;
+
+  border: 0;
+
+  z-index: 1000;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.location__mark {
+  .absolute-top-left(161px, 146px, 27px, 27px);
+
+  z-index: 100;
+}
+
+/**
+  * ===========================================================
+  * LOCATION tablet
+  * ===========================================================
+*/
+
+@media (min-width: @tablet-max-width) {
+  .location__mark {
+    .absolute-top-left(163px, 370px, 27px, 27px);
+    z-index: 100;
+  }
+}
+
+/**
+  * ===========================================================
+  * LOCATION desktop
+  * ===========================================================
+*/
+
+@media (min-width: @desktop-max-width) {
+  .location__mark {
+    .absolute-top-left(162px, 586px, 27px, 27px);
+    z-index: 100;
+  }
 }

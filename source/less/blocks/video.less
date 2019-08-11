@@ -6,12 +6,12 @@
 .video {
 
   padding: 0;
-  padding-top: 35px;
-  padding-bottom: 40px;
+  padding-top: 32px;
+  padding-bottom: 38px;
 
   font-size: 14px;
   line-height: 24px;
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
 
   background-color: #fefefe;
@@ -33,14 +33,19 @@
 .video__content {
   padding: 0;
   margin: 0 30px;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
 
   text-align: center;
   text-transform: uppercase;
 }
 
+.video__content br {
+  display: none;
+}
+
 .video__item {
   padding-bottom: 66px;
+  margin: 0 auto;
 
   width: 320px;
   height: 200px;
@@ -186,6 +191,10 @@
     padding: 0 72px;
   }
 
+  .video__content br {
+    display: none;
+  }
+
   .video__item {
     position: relative;
 
@@ -312,6 +321,10 @@
   .video__content {
     margin: 0 320px;
     padding: 0;
+  }
+
+  .video__content br {
+    display: inline;
   }
 
   .video__item {
