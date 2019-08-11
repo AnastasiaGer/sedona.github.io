@@ -324,7 +324,10 @@
 
   &--tourists {
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 17px;
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 2px;
   }
 }
 
@@ -355,7 +358,7 @@
       width: 100%;
       height: 256px;
 
-      padding: 45px 550px 20px 40px;
+      padding: 28px 550px 20px 40px;
       background-image: url("../img/main-city-tablet@1x.jpg");
       background-position: right;
 
@@ -370,7 +373,7 @@
       width: 100%;
       height: 256px;
 
-      padding: 45px 40px 20px 550px;
+      padding: 28px 40px 20px 550px;
       background-image: url("../img/main-bridge-tablet@1x.jpg");
       background-position: left;
 
@@ -405,9 +408,6 @@
   }
 
   .advantages__big--city {
-    width: 256px;
-    height: 256px;
-    padding: 28px 40px 45px 40px;
     text-align: center;
   }
 
@@ -423,17 +423,16 @@
   .advantages__city-content {
     font-size: 14px;
     font-weight: 400;
+    margin: 0;
     margin-top: 9px;
     margin-bottom: 21px;
-    padding: 0 5px;
+    padding-left: 2px;
+    padding-right: 5px;
   }
 
   .advantages__big--bridge {
     order: 1;
 
-    height: 256px;
-    width: 256px;
-    padding: 28px 40px 45px 40px;
     text-align: center;
   }
 
@@ -561,7 +560,7 @@
   }
 
   .advantages__gray {
-    padding: 30px 0 20px 0;
+    padding: 30px 0 22px 0;
     width: 256px;
 
     &::after {
@@ -601,11 +600,9 @@
     }
   }
 
-  .advantages__gray-content--road br {
-    display: inline;
-  }
-
   .advantages__gray-content {
+    margin-top: 10px;
+    margin-bottom: 22px;
     &--area {
       margin-top: 10px;
       margin-bottom: 22px;
@@ -624,6 +621,10 @@
       padding: 0 40px;
     }
   }
+
+  .advantages__gray-content--road br {
+    display: inline;
+  }
 }
 /**
   * ===========================================================
@@ -635,7 +636,7 @@
   .advantages__item {
     &--city {
       width: 100%;
-      padding: 53px 860px 50px 60px;
+      padding: 35px 860px 50px 60px;
       background-image: url("../img/main-city-desktop@1x.jpg");
       background-position: right;
       background-size: auto;
@@ -648,7 +649,7 @@
 
     &--bridge {
       width: 100%;
-      padding: 53px 60px 50px 860px;
+      padding: 35px 60px 50px 860px;
       background-image: url("../img/main-bridge-desktop@1x.jpg");
       background-position: left;
 
@@ -667,26 +668,18 @@
     }
   }
 
-  .advantages__big {
-    &--city,
-    &--bridge {
-      width: 400px;
-      padding: 36px 40px 45px 40px;
-    }
-  }
-
   .advantages__city-header {
     padding: 0 55px;
   }
 
   .advantages__city-content {
-    padding: 0 20px;
-    margin-bottom: 23px;
-    margin-top: 8px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 6px;
   }
 
   .advantages__bridge-header {
-    padding: 0 55px;
+    margin-left: 27px;
   }
 
   .advantages__bridge-header br {
@@ -694,9 +687,9 @@
   }
 
   .advantages__bridge-content {
-    padding: 0 20px;
-    margin-bottom: 23px;
-    margin-top: 8px;
+    margin-bottom: 21px;
+    margin-top: 10px;
+    margin-left: 29px;
   }
 
   .advantages__bridge-content br {
