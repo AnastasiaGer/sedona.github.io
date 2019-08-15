@@ -116,7 +116,7 @@
         </p>
       </section>
 
-      <form class="recall-form" action="/" method="post">
+      <form class="recall-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="recall-form__section  recall-form__section--id">
           <legend class="recall-form__title">Представьтесь:</legend>
           <ul class="recall-form__id">
@@ -173,30 +173,24 @@
           <legend class="recall-form__title">Ваше общее впечатление:</legend>
           <ul class="recall-form__interview">
             <li class="recall-form__interview-item">
-              <label class="recall-form__radio-control">
-                <input type="radio" name="interview" value="positive" checked>
-                <span class="recall-form__radio-icon">
-                  <span class="recall-form__radio-icon-tick"></span>
-                </span>
-                <span class="recall-form__radio-label">Скорее положительное</span>
+              <input class="filter-input filter-input-radio visually-hidden" type="radio" name="interview"
+                value="positive" id="positive" checked>
+              <label class="recall-form__radio-control" for="positive">
+                Скорее положительное
               </label>
             </li>
             <li class="recall-form__interview-item">
-              <label class="recall-form__radio-control">
-                <input type="radio" name="interview" value="negative">
-                <span class="recall-form__radio-icon">
-                  <span class="recall-form__radio-icon-tick"></span>
-                </span>
-                <span class="recall-form__radio-label">Скорее отрицательное</span>
+              <input class="filter-input filter-input-radio visually-hidden" type="radio" name="interview"
+                value="negative" id="negative">
+              <label class="recall-form__radio-control" for="negative">
+                Скорее отрицательное
               </label>
             </li>
             <li class="recall-form__interview-item">
-              <label class="recall-form__radio-control">
-                <input type="radio" name="interview" value="negative">
-                <span class="recall-form__radio-icon">
-                  <span class="recall-form__radio-icon-tick"></span>
-                </span>
-                <span class="recall-form__radio-label">Затрудняюсь ответить</span>
+              <input class="filter-input filter-input-radio visually-hidden" type="radio" name="interview" value="hard"
+                id="hard">
+              <label class="recall-form__radio-control" for="hard">
+                Затрудняюсь ответить
               </label>
             </li>
           </ul>
@@ -206,47 +200,29 @@
           <legend class="recall-form__title  recall-form__title--highlight">Посещенные достопримечательности:</legend>
           <ul class="recall-form__visited">
             <li class="recall-form__visited-item recall-form__visited-item--bridge">
-              <label class="recall-form__checkbox-control">
-                <input type="checkbox" name="devils-bridge" checked>
-                <span class="recall-form__checkbox-icon">
-                  <svg class="recall-form__checkbox-icon-tick" width="23" height="20">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-                  </svg>
-                </span>
-                <span class="recall-form__checkbox-label">Мост Дьявола</span>
+              <input class="visually-hidden form-input form-input-checkbox" type="checkbox" name="devils-bridge" id="devils-bridge"
+                checked>
+              <label class="recall-form__checkbox-control" for="devils-bridge">
+                Мост Дьявола
               </label>
             </li>
             <li class="recall-form__visited-item recall-form__visited-item--mountain">
-              <label class="recall-form__checkbox-control">
-                <input type="checkbox" name="mountain-bell" checked>
-                <span class="recall-form__checkbox-icon">
-                  <svg class="recall-form__checkbox-icon-tick" width="23" height="20">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-                  </svg>
-                </span>
-                <span class="recall-form__checkbox-label">Гора-Колокол</span>
+              <input class="visually-hidden form-input form-input-checkbox" type="checkbox" name="mountain-bell" id="mountain-bell"
+                checked>
+              <label class="recall-form__checkbox-control" for="mountain-bell">
+                Гора-Колокол
               </label>
             </li>
             <li class="recall-form__visited-item recall-form__visited-item--park">
-              <label class="recall-form__checkbox-control">
-                <input type="checkbox" name="slide-park" checked>
-                <span class="recall-form__checkbox-icon">
-                  <svg class="recall-form__checkbox-icon-tick" width="23" height="20">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-                  </svg>
-                </span>
-                <span class="recall-form__checkbox-label">Слайд-парк</span>
+              <input class="visually-hidden form-input form-input-checkbox" type="checkbox" name="slide-park" id="slide-park" checked>
+              <label class="recall-form__checkbox-control" for="slide-park">
+                Слайд-парк
               </label>
             </li>
             <li class="recall-form__visited-item recall-form__visited-item--red">
-              <label class="recall-form__checkbox-control">
-                <input type="checkbox" name="red-rocks">
-                <span class="recall-form__checkbox-icon">
-                  <svg class="recall-form__checkbox-icon-tick" width="23" height="20">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tick"></use>
-                  </svg>
-                </span>
-                <span class="recall-form__checkbox-label">Красные скалы</span>
+              <input class="visually-hidden form-input form-input-checkbox" type="checkbox" name="red-rocks" id="red-rocks">
+              <label class="recall-form__checkbox-control" for="red-rocks">
+                Красные скалы
               </label>
             </li>
           </ul>
