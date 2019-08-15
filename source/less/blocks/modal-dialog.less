@@ -33,7 +33,7 @@
 
   z-index: 500;
 
-  &--failure .modal-dialog__wrap {
+  &--fail .modal-dialog__wrap {
     padding-bottom: 32px;
   }
 
@@ -47,7 +47,6 @@
 
   &--show {
     display: block;
-    animation: zoomin 0.5s;
   }
 }
 
@@ -102,4 +101,48 @@
 
   font-size: 18px;
   line-height: 26px;
+}
+
+/**
+* ===========================================================
+* MAIN NAVIGATION tablet
+* ===========================================================
+*/
+
+@media (min-width: @tablet-max-width) {
+  .modal-dialog {
+    &--success .modal-dialog__wrap {
+      padding-bottom: 25px;
+      width: 560px;
+    }
+
+    &--success .modal-dialog__content {
+      padding: 0 70px;
+    }
+  }
+
+  .modal-dialog__wrap {
+    width: 320px;
+  }
+
+  .modal-dialog__header {
+    margin: 15px 40px;
+    margin-bottom: 25px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-dialog__btn-ok {
+    margin: 25px;
+    margin-bottom: 20px;
+
+    min-width: 272px;
+  }
+
+  .modal-dialog__btn-cancel {
+    margin: 45px;
+
+    min-width: 458px;
+  }
 }
