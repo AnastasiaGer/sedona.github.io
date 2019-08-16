@@ -1404,6 +1404,9 @@ body {
   height: auto;
   z-index: 0;
 }
+.location__map-wrap {
+  z-index: 1000;
+}
 .location__map-frame {
   position: absolute;
   top: 0;
