@@ -147,7 +147,9 @@ body {
   z-index: 100;
 }
 .page-header__banner-text {
+  position: absolute;
   margin-left: -230px;
+  left: 50%;
   top: 30px;
   width: 458px;
   height: 78px;
@@ -205,8 +207,8 @@ body {
     z-index: 1;
   }
   .page-header__banner-text {
-    margin-top: 96px;
-    margin-left: 156px;
+    margin-top: 65px;
+    margin-left: -228px;
     -webkit-transform: none;
             transform: none;
   }
@@ -245,8 +247,8 @@ body {
     z-index: 100;
   }
   .page-header__banner-text {
-    margin-top: 103px;
-    margin-left: 371px;
+    margin-top: 75px;
+    margin-left: -230px;
   }
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
