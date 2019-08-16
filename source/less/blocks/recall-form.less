@@ -333,7 +333,7 @@
   display: block;
 
   padding: 15px 10px;
-  padding-left: 75px;
+  padding-left: 78px;
 }
 
 /**
@@ -381,8 +381,8 @@
   content: "";
 
   position: absolute;
-  top: 2px;
-  left: -4px;
+  top: 0;
+  left: 0;
 
   width: 56px;
   height: 56px;
@@ -395,8 +395,8 @@
   content: url("../img/icon-tick.svg");
 
   position: absolute;
-  top: 18px;
-  left: 15px;
+  top: 16px;
+  left: 17px;
 
   width: 25px;
   height: 19px;
@@ -633,7 +633,7 @@
   }
 
   .recall-form__id-label {
-    padding-left: 3px;
+    padding-left: 5px;
   }
 
   .recall-form__interview {
@@ -672,6 +672,10 @@
 
     margin: 0;
     margin-bottom: 30px;
+  }
+
+  .form-input-checkbox:checked + label::after {
+    left: 19px;
   }
 
   .recall-form__message-wrap {
