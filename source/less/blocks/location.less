@@ -4,26 +4,42 @@
   * ===========================================================
   */
 .location {
-  position: relative;
-
   height: 350px;
+  position: relative;
+}
+
+.location__map-wrap {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  max-width: 100%;
+  height: auto;
 }
 
 .location__map {
   padding: 0;
-  max-width: 100%;
+  max-width: 1200px;
   height: auto;
 
   z-index: 0;
 }
 
 .location__map-frame {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  margin-left: -601px;
+
   height: 350px;
-  max-width: 100%;
+  width: 1200px;
 
   border: 0;
 
   z-index: 1000;
+
 
   &--nojs {
     display: none;

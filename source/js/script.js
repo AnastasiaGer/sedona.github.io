@@ -64,3 +64,12 @@ if (recallForm) {
     successDialog.classList.remove("modal-dialog--show");
   })
 }
+
+
+/*
+ * Интерактивная карта на главной странице
+ */
+
+var locationMapFrame = document.querySelector(".location__map-frame");
+
+locationMapFrame.classList.remove("location__map-frame--nojs");

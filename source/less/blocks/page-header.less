@@ -53,10 +53,11 @@
 }
 
 .page-header__banner-text {
-  .img-x-center(460px);
+  position: absolute;
 
+  margin-left: -230px;
+  left: 50%;
   top: 30px;
-
   width: 458px;
   height: 78px;
 
@@ -68,12 +69,15 @@
   }
 }
 
-.page-header__banner-text--big {
-  .img-x-center(321px);
+.page-header__banner-big {
+  position: absolute;
 
+  left: 50%;
   top: 88px;
 
-  width: 320px;
+  margin-left: -141.5px;
+
+  width: 282px;
   height: 215px;
 
   background-color: transparent;
@@ -125,19 +129,17 @@
     z-index: 100;
   }
 
-  .page-header__banner-text--big {
-    .img-x-center(460px);
-
+  .page-header__banner-big {
+    margin-left: -230px;
     top: 78px;
-
     width: 460px;
     height: 350px;
-
     z-index: 1;
   }
 
   .page-header__banner-text {
-    margin-top: 66px;
+    margin-top: 65px;
+    margin-left: -228px;
     transform: none;
   }
 }
@@ -173,7 +175,7 @@
   .page-header__top-logo {
     position: absolute;
 
-    top: -57px;
+    top: -55px;
     left: 50%;
 
     margin-left: -94px;
@@ -185,6 +187,7 @@
   }
 
   .page-header__banner-text {
-    margin-top: 73px;
+    margin-top: 75px;
+    margin-left: -230px;
   }
 }
