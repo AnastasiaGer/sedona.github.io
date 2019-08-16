@@ -15,6 +15,7 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require('gulp-html-minifier');
 var del = require("del");
 
 gulp.task("css", function () {
@@ -96,6 +97,12 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("minify", function() {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"))
+});
+
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
@@ -120,7 +127,8 @@ gulp.task("build", gulp.series(
   "images",
   "webp",
   "sprite",
-  "html"
+  "html",
+  "minify"
 ));
 
 gulp.task("refresh", function (done) {
@@ -135,5 +143,6 @@ gulp.task("start", gulp.series(
   "js",
   "sprite",
   "html",
+  "minify",
   "server"
 ));
