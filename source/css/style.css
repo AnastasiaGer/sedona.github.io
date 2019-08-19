@@ -563,6 +563,8 @@ body {
 */
 @media (min-width: 1200px) {
   .page-intro {
+    width: 1200px;
+    margin: 0 auto;
     padding: 30px 345px;
     padding-bottom: 20px;
   }
@@ -1159,6 +1161,10 @@ body {
   * ===========================================================
 */
 @media (min-width: 1200px) {
+  .advantages {
+    width: 1200px;
+    margin: 0 auto;
+  }
   .advantages__item--city {
     width: 100%;
     padding: 35px 860px 37px 60px;
@@ -1372,6 +1378,8 @@ body {
 */
 @media (min-width: 1200px) {
   .hotel-search-dialog {
+    width: 1200px;
+    margin: 0 auto;
     padding: 37px 60px;
     padding-bottom: 67px;
   }
@@ -1453,6 +1461,10 @@ body {
   * ===========================================================
 */
 @media (min-width: 1200px) {
+  .location {
+    width: 1200px;
+    margin: 0 auto;
+  }
   .location__mark {
     position: absolute;
     top: 162px;
@@ -2249,6 +2261,8 @@ body {
 */
 @media (min-width: 1200px) {
   .recall-form {
+    width: 1200px;
+    margin: 0 auto;
     padding: 0 120px 58px 120px;
   }
   .recall-form__invalid-msg--tel {
@@ -2583,7 +2597,8 @@ body {
 @media (min-width: 1200px) {
   .photo-list {
     padding: 0;
-    margin: 0;
+    width: 1200px;
+    margin: 0 auto;
   }
   .photo-list__item {
     position: relative;
@@ -2874,6 +2889,8 @@ body {
 */
 @media (min-width: 1200px) {
   .video {
+    width: 1200px;
+    margin: 0 auto;
     padding-top: 71px;
     padding-bottom: 85px;
   }
