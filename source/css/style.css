@@ -563,20 +563,14 @@ body {
 */
 @media (min-width: 1200px) {
   .page-intro {
-    width: 1200px;
-    margin: 0 auto;
     padding: 30px 345px;
     padding-bottom: 20px;
   }
   .page-intro--photo {
     padding-bottom: 38px;
-    width: 1200px;
-    margin: 0 auto;
   }
   .page-intro--form {
     padding-bottom: 38px;
-    width: 1200px;
-    margin: 0 auto;
   }
   .page-intro__header {
     padding: 0 23px;
@@ -1382,8 +1376,6 @@ body {
 */
 @media (min-width: 1200px) {
   .hotel-search-dialog {
-    width: 1200px;
-    margin: 0 auto;
     padding: 37px 60px;
     padding-bottom: 67px;
   }
