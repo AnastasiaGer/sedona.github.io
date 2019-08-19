@@ -570,9 +570,13 @@ body {
   }
   .page-intro--photo {
     padding-bottom: 38px;
+    width: 1200px;
+    margin: 0 auto;
   }
   .page-intro--form {
     padding-bottom: 38px;
+    width: 1200px;
+    margin: 0 auto;
   }
   .page-intro__header {
     padding: 0 23px;
