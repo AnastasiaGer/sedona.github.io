@@ -1001,7 +1001,7 @@ body {
     padding: 0 5px;
   }
   .advantages__bridge-content br {
-    display: inline;
+    display: none;
   }
   .advantages__list--cards {
     -ms-flex-pack: distribute;
@@ -1075,7 +1075,7 @@ body {
     padding: 9px 20px 5px 15px;
   }
   .advantages__card-content--gift br {
-    display: none;
+    display: inline;
   }
   .advantages__card-content--burger br {
     display: inline;
@@ -1250,7 +1250,7 @@ body {
     display: inline;
   }
   .advantages__card-content--burger br {
-    display: inline;
+    display: none;
   }
   .advantages__gray {
     -webkit-box-sizing: border-box;
