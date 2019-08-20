@@ -1001,7 +1001,7 @@ body {
     padding: 0 5px;
   }
   .advantages__bridge-content br {
-    display: none;
+    display: inline;
   }
   .advantages__list--cards {
     -ms-flex-pack: distribute;
@@ -1250,7 +1250,7 @@ body {
     display: inline;
   }
   .advantages__card-content--burger br {
-    display: none;
+    display: inline;
   }
   .advantages__gray {
     -webkit-box-sizing: border-box;
@@ -2167,6 +2167,11 @@ body {
     overflow: visible;
     white-space: normal;
   }
+  .recall-form__radio-control {
+    display: block;
+    padding: 15px 10px;
+    padding-left: 75px;
+  }
   .recall-form__contacts-label {
     margin: 8px 21px 7px 21px;
   }
@@ -2321,6 +2326,11 @@ body {
     margin-left: 0;
     padding-left: 5px;
   }
+  .recall-form__radio-control {
+    display: block;
+    padding: 15px 10px;
+    padding-left: 75px;
+  }
   .recall-form__contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2369,6 +2379,10 @@ body {
   .recall-form__visited-item {
     display: inline-block;
     min-width: 170px;
+  }
+  .recall-form__checkbox-control {
+    display: block;
+    padding: 15px 6px 15px 80px;
   }
   .recall-form__checkbox-label {
     padding-left: 80px;
@@ -2802,7 +2816,7 @@ body {
     padding: 0 72px;
   }
   .video__content br {
-    display: none;
+    display: inline;
   }
   .video__item {
     position: relative;
