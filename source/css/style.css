@@ -1250,7 +1250,7 @@ body {
     display: inline;
   }
   .advantages__card-content--burger br {
-    display: none;
+    display: inline;
   }
   .advantages__gray {
     -webkit-box-sizing: border-box;
