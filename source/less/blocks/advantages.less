@@ -15,6 +15,24 @@
 
   margin: 0;
   padding: 0;
+
+  &--cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    list-style: none;
+    padding: 0;
+  }
+
+  &--gray {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    list-style: none;
+    padding: 0;
+  }
 }
 
 .advantages__item {
@@ -27,7 +45,6 @@
   margin: 0;
 
   color: #ffffff;
-  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
@@ -141,15 +158,6 @@
   display: none;
 }
 
-.advantages__list--cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  list-style: none;
-  padding: 0;
-}
-
 .advantages__card {
   position: relative;
 
@@ -243,15 +251,6 @@
 
 .advantages__card-content--burger br {
   display: none;
-}
-
-.advantages__list--gray {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  list-style: none;
-  padding: 0;
 }
 
 .advantages__gray {
@@ -382,6 +381,9 @@
     }
 
     &--cards {
+      justify-content: space-around;
+      align-items: stretch;
+
       padding: 0;
       margin: 0;
 
@@ -405,8 +407,16 @@
     }
   }
 
-  .advantages__big--city {
-    text-align: center;
+  .advantages__big {
+    &--city {
+      text-align: center;
+    }
+
+    &--bridge {
+      order: 1;
+
+      text-align: center;
+    }
   }
 
   .advantages__city-header {
@@ -426,12 +436,6 @@
     margin-bottom: 21px;
     padding-left: 2px;
     padding-right: 5px;
-  }
-
-  .advantages__big--bridge {
-    order: 1;
-
-    text-align: center;
   }
 
   .advantages__bridge-header {
@@ -457,17 +461,6 @@
 
   .advantages__bridge-content br {
     display: none;
-  }
-
-  .advantages__list--cards {
-    justify-content: space-around;
-    align-items: stretch;
-
-    padding: 0;
-    margin: 0;
-
-    width: 100%;
-    min-height: 330px;
   }
 
   .advantages__card {
@@ -544,17 +537,6 @@
 
   .advantages__card-content--burger br {
     display: inline;
-  }
-
-  .advantages__list--gray {
-    justify-content: space-around;
-    align-items: stretch;
-
-    padding: 0;
-    margin: 0;
-
-    width: 100%;
-    min-height: 190px;
   }
 
   .advantages__gray {
