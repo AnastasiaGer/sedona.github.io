@@ -47,6 +47,11 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+@media (min-width: 1200px) {
+  .visually-hidden-desktop {
+    display: none;
+  }
+}
 /**
   * ===========================================================
   * btn SECTION
