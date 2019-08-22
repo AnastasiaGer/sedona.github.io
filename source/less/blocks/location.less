@@ -8,6 +8,7 @@
   position: relative;
 }
 
+
 .location__map-frame {
   position: absolute;
   top: 0;
@@ -21,8 +22,20 @@
   }
 }
 
+.location__map-wrap {
+  width: 320px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
 .location__map {
-  display: block;
+  padding: 0;
+  max-width: 1200px;
+  height: auto;
+  position: relative;
+
+  z-index: 0;
 }
 
 .location__mark {
@@ -38,9 +51,10 @@
 */
 
 @media (min-width: @tablet-max-width) {
-  .location__map {
-    width: 100%;
-    height: 350px;
+  .location__map-wrap {
+    width: 758px;
+    height: auto;
+    margin: 0 auto;
   }
 
   .location__mark {
@@ -56,6 +70,12 @@
 */
 
 @media (min-width: @desktop-max-width) {
+  .location__map-wrap {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
   .location__mark {
     .absolute-top-left(162px, 586px, 27px, 27px);
     z-index: 100;
