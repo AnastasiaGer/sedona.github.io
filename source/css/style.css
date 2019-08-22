@@ -2136,6 +2136,11 @@ template {
           box-shadow: none;
   cursor: pointer;
 }
+.recall-form__input-btn-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 /**
     * ===========================================================
     *  RECALL FORM interview
