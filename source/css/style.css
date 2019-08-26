@@ -105,6 +105,7 @@ body {
 }
 .page-header__banner {
   position: relative;
+  text-align: center;
   height: 388px;
   background-color: #396e98;
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
@@ -137,10 +138,8 @@ body {
   z-index: 100;
 }
 .page-header__banner-text {
-  position: absolute;
-  margin-left: -230px;
-  left: 50%;
-  top: 30px;
+  padding: 32px;
+  margin-left: -101px;
   width: 458px;
   height: 78px;
   -webkit-transform: scale(0.5);
@@ -151,10 +150,8 @@ body {
   display: none;
 }
 .page-header__banner-big {
-  position: absolute;
-  left: 50%;
-  top: 88px;
-  margin-left: -141.5px;
+  padding: 89px;
+  margin-left: -70px;
   width: 282px;
   height: 215px;
   background-color: transparent;
@@ -190,15 +187,15 @@ body {
     z-index: 100;
   }
   .page-header__banner-big {
-    margin-left: -230px;
-    top: 78px;
+    padding: 77px;
+    margin: 0;
     width: 460px;
     height: 350px;
     z-index: 1;
   }
   .page-header__banner-text {
-    margin-top: 65px;
-    margin-left: -228px;
+    padding: 95px;
+    margin: 0;
     -webkit-transform: none;
             transform: none;
   }
@@ -236,9 +233,11 @@ body {
     height: 96px;
     z-index: 100;
   }
+  .page-header__banner-big {
+    padding: 79px;
+  }
   .page-header__banner-text {
-    margin-top: 75px;
-    margin-left: -230px;
+    padding: 103px;
   }
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
@@ -480,6 +479,7 @@ body {
 .page-intro__content {
   margin: 0;
   margin-top: 27px;
+  color: #333333;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
@@ -1484,37 +1484,6 @@ body {
   width: 136px;
   text-transform: uppercase;
 }
-.social-links {
-  font-size: 0;
-}
-.social-link {
-  position: relative;
-  display: inline-block;
-  margin: 0 3px;
-  width: 46px;
-  height: 48px;
-  font-size: 0;
-  background-color: #81b3d2;
-}
-.social-link:hover {
-  background-color: #669ec0;
-}
-.social-link:active {
-  background-color: #5496bd;
-}
-.social-link:active .social-link__icon {
-  fill: #88b6d1;
-}
-.social-link__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 18px;
-  height: 18px;
-  margin-top: -9px;
-  margin-left: -9px;
-  fill: #ffffff;
-}
 .page-footer__copyright {
   position: relative;
   margin: 0 auto;
@@ -1573,12 +1542,6 @@ body {
     padding: 0;
     text-align: left;
   }
-  .page-footer__social {
-    vertical-align: top;
-    width: 156px;
-    margin: 10px 10px;
-    margin-left: 10px;
-  }
   .page-footer__copyright {
     vertical-align: top;
     float: right;
@@ -1598,11 +1561,67 @@ body {
     padding: 22px 120px;
     margin: 0 auto;
   }
-  .page-footer__social {
-    margin: 10px 15px;
-  }
   .page-footer__header {
     padding: 0;
+  }
+}
+/**
+* ===========================================================
+* SOCIAL LINKS
+* ===========================================================
+*/
+.social-links {
+  font-size: 0;
+}
+.social-link {
+  position: relative;
+  display: inline-block;
+  margin: 0 3px;
+  width: 46px;
+  height: 48px;
+  font-size: 0;
+  background-color: #81b3d2;
+}
+.social-link:hover {
+  background-color: #669ec0;
+}
+.social-link:active {
+  background-color: #5496bd;
+}
+.social-link:active .social-link__icon {
+  fill: #88b6d1;
+}
+.social-link__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  margin-left: -9px;
+  fill: #ffffff;
+}
+/**
+* ===========================================================
+* SOCIAL LINKS tablet
+* ===========================================================
+*/
+@media (min-width: 768px) {
+  .page-footer__social {
+    vertical-align: top;
+    width: 156px;
+    margin: 10px 10px;
+    margin-left: 10px;
+  }
+}
+/**
+* ===========================================================
+* PAGE FOOTER desktop
+* ===========================================================
+*/
+@media (min-width: 1200px) {
+  .page-footer__social {
+    margin: 10px 15px;
   }
 }
 /**
@@ -1825,7 +1844,6 @@ body {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  cursor: pointer;
 }
 .recall-form__input-btn-icon {
   position: absolute;
@@ -2138,6 +2156,7 @@ body {
     left: 0;
     padding: 0 52px;
     width: 300px;
+    margin-left: 122px;
     text-align: center;
     -webkit-transform: none;
             transform: none;
@@ -2197,14 +2216,14 @@ body {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 93px;
-    margin-top: 43px;
+    margin: 0;
+    padding: 0;
+    padding-top: 42px;
   }
   .recall-form__visited-item {
     display: block;
     min-width: 260px;
-    margin: 0;
-    margin-bottom: 30px;
+    margin: 0 -92px 30px 93px;
   }
   .form-input-checkbox:checked + label::after {
     left: 19px;
@@ -2285,7 +2304,7 @@ body {
   }
   .recall-form__title--highlight {
     top: 1px;
-    left: -4px;
+    left: -1px;
     margin: 0 280px;
   }
   .recall-form__id {
@@ -2351,11 +2370,13 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-left: 0;
+    padding-bottom: 30px;
     width: 100%;
   }
   .recall-form__visited-item {
     display: inline-block;
     min-width: 170px;
+    margin: 0;
   }
   .recall-form__checkbox-control {
     display: block;
@@ -2376,7 +2397,7 @@ body {
   }
   .recall-form__btn {
     margin: 0;
-    padding-left: 28px;
+    padding-left: 34px;
     min-width: 480px;
     text-align: center;
   }

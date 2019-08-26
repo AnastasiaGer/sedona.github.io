@@ -13,6 +13,8 @@
 .page-header__banner {
   position: relative;
 
+  text-align: center;
+
   height: 388px;
   background-color: #396e98;
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
@@ -53,11 +55,9 @@
 }
 
 .page-header__banner-text {
-  position: absolute;
+  padding: 32px;
+  margin-left: -101px;
 
-  margin-left: -230px;
-  left: 50%;
-  top: 30px;
   width: 458px;
   height: 78px;
 
@@ -70,12 +70,8 @@
 }
 
 .page-header__banner-big {
-  position: absolute;
-
-  left: 50%;
-  top: 88px;
-
-  margin-left: -141.5px;
+  padding: 89px;
+  margin-left: -70px;
 
   width: 282px;
   height: 215px;
@@ -130,16 +126,16 @@
   }
 
   .page-header__banner-big {
-    margin-left: -230px;
-    top: 78px;
+    padding: 77px;
+    margin: 0;
     width: 460px;
     height: 350px;
     z-index: 1;
   }
 
   .page-header__banner-text {
-    margin-top: 65px;
-    margin-left: -228px;
+    padding: 95px;
+    margin: 0;
     transform: none;
   }
 }
@@ -186,8 +182,11 @@
     z-index: 100;
   }
 
+  .page-header__banner-big {
+    padding: 79px;
+  }
+
   .page-header__banner-text {
-    margin-top: 75px;
-    margin-left: -230px;
+    padding: 103px;
   }
 }
