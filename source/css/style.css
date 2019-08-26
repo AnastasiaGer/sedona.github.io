@@ -1386,6 +1386,8 @@ body {
   left: 0;
   width: 100%;
   height: 350px;
+  border: 0;
+  frameborder: 0;
   z-index: 1000;
 }
 .location__map-frame--nojs {
