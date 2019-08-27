@@ -1821,12 +1821,13 @@ body {
 }
 .recall-form__contacts-item {
   margin: 0 20px;
+  margin-bottom: 8px;
   text-align: left;
 }
 .recall-form__contacts-item input[type="tel"],
 .recall-form__contacts-item input[type="email"] {
   padding-right: 78px;
-  margin-bottom: 7px;
+  margin: 0;
 }
 .recall-form__contacts-label {
   display: block;
@@ -2206,7 +2207,7 @@ body {
   .recall-form__contacts-item {
     position: relative;
     margin: 0;
-    margin-bottom: 7px;
+    margin-bottom: 14px;
   }
   .recall-form__visited {
     display: -webkit-box;
@@ -2296,7 +2297,7 @@ body {
   }
   .recall-form__section--visited {
     width: 100%;
-    margin-top: 19px;
+    margin-top: 21px;
   }
   .recall-form__section--message {
     margin-top: 36px;
@@ -2361,8 +2362,8 @@ body {
   }
   .recall-form__contacts-item input[type="tel"],
   .recall-form__contacts-item input[type="email"] {
-    margin-bottom: 4px;
-    padding: 15px 20px;
+    margin: 0;
+    padding: 16px 20px;
   }
   .recall-form__visited {
     display: -webkit-box;
