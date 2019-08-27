@@ -44,19 +44,7 @@ body {
   overflow: hidden;
 }
 
-@media @only-mobile-widths {
-  .visually-hidden-mobile {
-    display: none;
-  }
-}
-
-@media @only-tablet-widths {
-  .visually-hidden-tablet {
-    display: none;
-  }
-}
-
-@media @only-desktop-widths {
+@media (min-width: @desktop-max-width) {
   .visually-hidden-desktop {
     display: none;
   }
