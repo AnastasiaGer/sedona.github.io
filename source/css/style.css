@@ -1396,7 +1396,7 @@ body {
   position: absolute;
   bottom: -5px;
   left: 0;
-  margin-left: 31px;
+  margin-left: 32px;
   max-width: 100%;
   height: auto;
 }
@@ -2447,6 +2447,12 @@ body {
 .photo-item {
   width: 280px;
   height: 280px;
+}
+.photo-list__link {
+  display: inline-block;
+}
+.photo-list__link:focus {
+  border: 1px dashed #a8c4ec;
 }
 .photo-list__item-caption {
   display: -webkit-box;
