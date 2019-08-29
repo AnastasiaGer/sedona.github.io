@@ -141,8 +141,12 @@
   .main-nav__item {
     width: 153px;
 
-    &:nth-child(3) {
-      margin-left: auto;
+    &:nth-child(2n + 2) {
+      margin-right: 153px;
+    }
+
+    &:nth-child(4) {
+      margin-right: 0;
     }
 
     &:first-child .main-nav__link {
@@ -200,5 +204,13 @@
 @media (min-width: @desktop-max-width) {
   .main-nav__item {
     width: 239px;
+
+    &:nth-child(2n + 2) {
+      margin-right: 239px;
+    }
+
+    &:nth-child(4) {
+      margin-right: 0;
+    }
   }
 }
