@@ -1,30 +1,25 @@
-var mainNavigation = document.querySelector(".main-nav");
+/*
+* Меню
+*/
+var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
 
-var mainNvaigationItems = mainNavigation.querySelector(".main-nav__list");
-var btnOpenNavigation = mainNavigation.querySelector(".main-nav__btn-open");
-var btnCloseNavigation = mainNavigation.querySelector(".main-nav__btn-close");
+  navMain.classList.remove('main-nav--nojs');
 
-mainNavigation.classList.remove("main-nav--nojs");
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
 
-btnOpenNavigation.addEventListener("click", function () {
-  if (mainNvaigationItems.classList.contains("hidden")) {
-    mainNvaigationItems.classList.remove("hidden");
-    btnOpenNavigation.classList.add("hidden");
-    btnCloseNavigation.classList.remove("hidden");
-  }
-});
-
-btnCloseNavigation.addEventListener("click", function () {
-  if (!mainNvaigationItems.classList.contains("hidden")) {
-    mainNvaigationItems.classList.add("hidden");
-    btnOpenNavigation.classList.remove("hidden");
-    btnCloseNavigation.classList.add("hidden");
-  }
-});
 
 /*
- * Всплывающие дилоговые окна
- */
+* Всплывающие дилоговые окна
+*/
 
 var recallForm = document.querySelector(".recall-form");
 
@@ -64,12 +59,3 @@ if (recallForm) {
     successDialog.classList.remove("modal-dialog--show");
   })
 }
-
-
-/*
- * Интерактивная карта на главной странице
- */
-
-var locationMapFrame = document.querySelector(".location__map-frame");
-
-locationMapFrame.classList.remove("location__map-frame--nojs");

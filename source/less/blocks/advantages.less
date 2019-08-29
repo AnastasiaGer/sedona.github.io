@@ -23,6 +23,7 @@
 
     list-style: none;
     padding: 0;
+    margin-bottom: 37px;
   }
 
   &--gray {
@@ -168,7 +169,6 @@
   text-align: left;
 
   &--burger {
-    margin-bottom: 37px;
     padding: 27px 40px 0 70px;
   }
 }
@@ -254,6 +254,17 @@
 }
 
 .advantages__gray {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    width: 280px;
+    border-top: 1px solid #d6d6d6;
+  }
+
   &--area {
     padding: 24px 25px 11px 25px;
   }
@@ -267,17 +278,9 @@
   }
 }
 
-.advantages__gray--road,
-.advantages__gray--tourists {
-  position: relative;
-
+.advantages__gray:first-of-type {
   &::after {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 20px;
-    width: 280px;
-    border-top: 1px solid #d6d6d6;
+    display: none;
   }
 }
 
