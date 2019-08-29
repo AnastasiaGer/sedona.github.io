@@ -5,14 +5,82 @@
 */
 
 .main-nav {
+  min-height: 56px;
   font-size: 18px;
   line-height: 40px;
   font-weight: bold;
+  background-color: #ffffff;
+  position: relative;
+}
 
-  z-index: 100;
+.main-nav__toggle {
+  height: 56px;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  border: none;
+  z-index: 2;
+}
 
-  &--nojs .main-nav__btn {
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 16px;
+  left: 276px;
+
+  fill: #81b3d2;
+
+  width: 23px;
+  height: 21px;
+
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+    left: 276px;
+
+    fill: #ffffff;
+
+    width: 23px;
+    height: 22px;
+
+    cursor: pointer;
+    display: block;
+    background-color: #81b3d2;
+
+    z-index: 3;
+
+    background-image: url("../img/icon-cross.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item {
     display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
   }
 }
 
@@ -52,67 +120,6 @@
   }
 }
 
-.main-nav__control {
-  position: relative;
-
-  min-height: 56px;
-  background-color: #ffffff;
-}
-
-.main-nav__btn {
-  position: relative;
-
-  float: right;
-
-  margin: 5px;
-  padding: 0;
-
-  width: 53px;
-  height: 46px;
-
-  font-size: 0;
-
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-.main-nav__btn-icon {
-  position: absolute;
-
-  &--menu {
-    top: 50%;
-    left: 50%;
-
-    fill: #81b3d2;
-
-    width: 23px;
-    height: 21px;
-
-    margin-top: -12px;
-    margin-left: -12px;
-  }
-
-  &--cross {
-    top: -199px;
-    left: 27px;
-
-    fill: #ffffff;
-
-    width: 23px;
-    height: 22px;
-
-    margin-top: -13.5px;
-    margin-left: -12.5px;
-
-    cursor: pointer;
-    display: block;
-
-    z-index: 3;
-  }
-}
-
 /**
     * ===========================================================
     * MAIN NAVIGATION tablet
@@ -127,7 +134,7 @@
     background-color: #ffffff;
   }
 
-  .main-nav__btn-close {
+  .main-nav__toggle {
     display: none;
   }
 
@@ -182,10 +189,6 @@
         color: #d6d0cc;
       }
     }
-  }
-
-  .main-nav__control {
-    display: none;
   }
 }
 /**

@@ -24,6 +24,11 @@ body {
   color: #000000;
   background-color: #f2f2f2;
 }
+.page-wrapper {
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+          box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+}
 .overlay {
   display: none;
   position: fixed;
@@ -251,13 +256,64 @@ body {
   * ===========================================================
 */
 .main-nav {
+  min-height: 56px;
   font-size: 18px;
   line-height: 40px;
   font-weight: bold;
-  z-index: 100;
+  background-color: #ffffff;
+  position: relative;
 }
-.main-nav--nojs .main-nav__btn {
-  display: none;
+.main-nav__toggle {
+  height: 56px;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  border: none;
+  z-index: 2;
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 276px;
+  fill: #81b3d2;
+  width: 23px;
+  height: 21px;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 276px;
+  fill: #ffffff;
+  width: 23px;
+  height: 22px;
+  cursor: pointer;
+  display: block;
+  background-color: #81b3d2;
+  z-index: 3;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+  .main-nav--closed .main-nav__item--active {
+    display: block;
+  }
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    min-height: 0;
+  }
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
 }
 .main-nav__list {
   margin: 0;
@@ -286,48 +342,6 @@ body {
   color: #88b6d1;
   cursor: pointer;
 }
-.main-nav__control {
-  position: relative;
-  min-height: 56px;
-  background-color: #ffffff;
-}
-.main-nav__btn {
-  position: relative;
-  float: right;
-  margin: 5px;
-  padding: 0;
-  width: 53px;
-  height: 46px;
-  font-size: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-.main-nav__btn-icon {
-  position: absolute;
-}
-.main-nav__btn-icon--menu {
-  top: 50%;
-  left: 50%;
-  fill: #81b3d2;
-  width: 23px;
-  height: 21px;
-  margin-top: -12px;
-  margin-left: -12px;
-}
-.main-nav__btn-icon--cross {
-  top: -199px;
-  left: 27px;
-  fill: #ffffff;
-  width: 23px;
-  height: 22px;
-  margin-top: -13.5px;
-  margin-left: -12.5px;
-  cursor: pointer;
-  display: block;
-  z-index: 3;
-}
 /**
     * ===========================================================
     * MAIN NAVIGATION tablet
@@ -342,7 +356,7 @@ body {
         flex-wrap: wrap;
     background-color: #ffffff;
   }
-  .main-nav__btn-close {
+  .main-nav__toggle {
     display: none;
   }
   .main-nav__item {
@@ -388,9 +402,6 @@ body {
   .main-nav__link--active:active {
     background-color: #ffffff;
     color: #d6d0cc;
-  }
-  .main-nav__control {
-    display: none;
   }
 }
 /**
@@ -624,6 +635,7 @@ body {
           justify-content: space-between;
   list-style: none;
   padding: 0;
+  margin-bottom: 37px;
 }
 .advantages__list--gray {
   display: -webkit-box;
@@ -765,7 +777,6 @@ body {
   text-align: left;
 }
 .advantages__card--burger {
-  margin-bottom: 37px;
   padding: 27px 40px 0 70px;
 }
 .advantages__card-header {
@@ -830,6 +841,17 @@ body {
 .advantages__card-content--burger br {
   display: none;
 }
+.advantages__gray {
+  position: relative;
+}
+.advantages__gray::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 20px;
+  width: 280px;
+  border-top: 1px solid #d6d6d6;
+}
 .advantages__gray--area {
   padding: 24px 25px 11px 25px;
 }
@@ -839,18 +861,8 @@ body {
 .advantages__gray--tourists {
   padding: 29px 25px 10px 25px;
 }
-.advantages__gray--road,
-.advantages__gray--tourists {
-  position: relative;
-}
-.advantages__gray--road::after,
-.advantages__gray--tourists::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 20px;
-  width: 280px;
-  border-top: 1px solid #d6d6d6;
+.advantages__gray:first-of-type::after {
+  display: none;
 }
 .advantages__gray-header {
   font-size: 18px;
@@ -1372,39 +1384,37 @@ body {
   }
 }
 /**
-  * ===========================================================
-  * LOCATION mobile
-  * ===========================================================
-  */
+* ===========================================================
+* LOCATION mobile
+* ===========================================================
+*/
 .location {
   height: 350px;
   position: relative;
 }
-.location__map-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 350px;
-  border: 0;
-  frameborder: 0;
-  z-index: 1000;
-}
-.location__map-frame--nojs {
-  display: none;
-}
 .location__map-wrap {
-  width: 320px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  margin-left: 31px;
+  max-width: 100%;
   height: auto;
-  margin: 0 auto;
-  position: relative;
 }
 .location__map {
   padding: 0;
   max-width: 1200px;
   height: auto;
-  position: relative;
   z-index: 0;
+}
+.location__map-frame {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -601px;
+  height: 350px;
+  width: 1200px;
+  border: 0;
+  z-index: 1000;
 }
 .location__mark {
   position: absolute;
@@ -1420,11 +1430,6 @@ body {
   * ===========================================================
 */
 @media (min-width: 768px) {
-  .location__map-wrap {
-    width: 758px;
-    height: auto;
-    margin: 0 auto;
-  }
   .location__mark {
     position: absolute;
     top: 163px;
@@ -1440,11 +1445,6 @@ body {
   * ===========================================================
 */
 @media (min-width: 1200px) {
-  .location__map-wrap {
-    width: 1200px;
-    height: auto;
-    margin: 0 auto;
-  }
   .location__mark {
     position: absolute;
     top: 162px;
@@ -1485,6 +1485,9 @@ body {
   line-height: 26px;
   width: 136px;
   text-transform: uppercase;
+}
+.page-footer__social {
+  margin-top: 4px;
 }
 .page-footer__copyright {
   position: relative;
@@ -1544,6 +1547,12 @@ body {
     padding: 0;
     text-align: left;
   }
+  .page-footer__social {
+    vertical-align: top;
+    width: 156px;
+    margin: 16px 10px;
+    margin-left: 10px;
+  }
   .page-footer__copyright {
     vertical-align: top;
     float: right;
@@ -1565,6 +1574,9 @@ body {
   }
   .page-footer__header {
     padding: 0;
+  }
+  .page-footer__social {
+    margin: 15px;
   }
 }
 /**
@@ -1602,29 +1614,6 @@ body {
   margin-top: -9px;
   margin-left: -9px;
   fill: #ffffff;
-}
-/**
-* ===========================================================
-* SOCIAL LINKS tablet
-* ===========================================================
-*/
-@media (min-width: 768px) {
-  .page-footer__social {
-    vertical-align: top;
-    width: 156px;
-    margin: 10px 10px;
-    margin-left: 10px;
-  }
-}
-/**
-* ===========================================================
-* PAGE FOOTER desktop
-* ===========================================================
-*/
-@media (min-width: 1200px) {
-  .page-footer__social {
-    margin: 10px 15px;
-  }
 }
 /**
   * ===========================================================
@@ -1686,6 +1675,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  opacity: 1;
 }
 .recall-form input[type="text"]::-moz-placeholder,
 .recall-form input[type="tel"]::-moz-placeholder,
@@ -1694,6 +1684,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  opacity: 1;
 }
 .recall-form input[type="text"]:-ms-input-placeholder,
 .recall-form input[type="tel"]:-ms-input-placeholder,
@@ -1702,6 +1693,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  opacity: 1;
 }
 .recall-form input[type="text"]::-ms-input-placeholder,
 .recall-form input[type="tel"]::-ms-input-placeholder,
@@ -1710,6 +1702,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  opacity: 1;
 }
 .recall-form input[type="text"]::placeholder,
 .recall-form input[type="tel"]::placeholder,
@@ -1718,6 +1711,15 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
+  opacity: 1;
+}
+.recall-form input::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+.recall-form textarea::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
 }
 .recall-form input[type="checkbox"],
 .recall-form input[type="radio"] {
@@ -1740,9 +1742,9 @@ body {
 .recall-form__section {
   position: relative;
   margin: 0;
+  margin-top: -17px;
   padding: 0;
   border: none;
-  border-top: 1px solid #e5e5e5;
   text-align: center;
 }
 .recall-form__contacts,
@@ -1750,25 +1752,16 @@ body {
 .recall-form__visited {
   list-style: none;
 }
-.recall-form__radio-label,
-.recall-form__checkbox-label {
-  color: #000000;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  text-transform: none;
-}
 .recall-form__title {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 300px;
   height: 50px;
   margin: 0 10px;
   padding: 0;
+  padding-top: 18px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
+  border-top: 1px solid #e5e5e5;
   text-align: center;
   -webkit-transform: translateY(18px);
           transform: translateY(18px);
@@ -1780,7 +1773,7 @@ body {
   * ===========================================================
   */
 .recall-form__id {
-  margin: 66px 0;
+  margin: 15px 0;
   margin-bottom: 25px;
   padding: 0;
   list-style: none;
@@ -1813,9 +1806,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
-  margin-top: 58px;
-  margin-bottom: 21px;
+  margin-top: 7px;
+  margin-bottom: 19px;
   padding: 0;
   list-style: none;
 }
@@ -1859,8 +1854,8 @@ body {
     * ===========================================================
 */
 .recall-form__interview {
-  margin: 67px 0;
-  margin-bottom: 28px;
+  margin: 17px 0;
+  margin-bottom: 26px;
   padding: 0;
   font-size: 18px;
   line-height: 26px;
@@ -1876,7 +1871,7 @@ body {
   min-height: 56px;
   position: relative;
 }
-.filter-input-radio + label::before {
+.recall-form__radio-input + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1886,7 +1881,7 @@ body {
   border-radius: 50%;
   background-color: #f2f2f2;
 }
-.filter-input-radio:checked + label::after {
+.recall-form__radio-input:checked + label::after {
   content: "";
   position: absolute;
   top: 17px;
@@ -1942,7 +1937,7 @@ body {
       flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-top: 88px;
+  margin-top: 37px;
   width: 100%;
   font-size: 18px;
   line-height: 26px;
@@ -1959,7 +1954,7 @@ body {
   min-height: 56px;
   min-width: 280px;
 }
-.form-input-checkbox + label::before {
+.recall-form__checkbox-input + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1969,7 +1964,7 @@ body {
   border-radius: 5px;
   background-color: #f2f2f2;
 }
-.form-input-checkbox:checked + label::after {
+.recall-form__checkbox-input:checked + label::after {
   content: url("../img/icon-tick.svg");
   position: absolute;
   top: 16px;
@@ -2013,7 +2008,7 @@ body {
 */
 .recall-form__message-wrap {
   padding: 0;
-  margin: 62px 20px;
+  margin: 12px 20px;
   margin-bottom: 42px;
 }
 .recall-form__message-input {
@@ -2093,19 +2088,13 @@ body {
     width: 648px;
   }
   .recall-form__section--id {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin: 0;
-    margin-left: 54px;
+    margin-left: 49px;
     width: 280px;
     border: none;
   }
@@ -2113,8 +2102,10 @@ body {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    margin-top: 51px;
+    margin-top: 62px;
+    margin-bottom: 14px;
     width: 100%;
+    border-top: 1px solid #e5e5e5;
   }
   .recall-form__section--interview {
     -webkit-box-ordinal-group: 2;
@@ -2132,35 +2123,37 @@ body {
             order: 4;
     margin-top: 18px;
     width: 100%;
+    border-top: 1px solid #e5e5e5;
   }
   .recall-form__section--message {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
-    margin-top: 40px;
+    margin-top: 52px;
     width: 100%;
+    border-top: 1px solid #e5e5e5;
   }
   .recall-form__title {
-    top: 0;
-    left: 0;
     margin-left: 0;
-    padding-left: 7px;
+    padding: 0;
+    padding-left: 9px;
     height: auto;
     font-size: 21px;
     line-height: 26px;
     text-align: left;
-    overflow: hidden;
+    border: none;
+    overflow: inherit;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
   .recall-form__title--highlight {
     position: relative;
-    top: 0;
-    left: 0;
     padding: 0 52px;
     width: 300px;
     margin-left: 122px;
+    margin-top: -13px;
     text-align: center;
+    background: #ffffff;
     -webkit-transform: none;
             transform: none;
     overflow: visible;
@@ -2178,22 +2171,19 @@ body {
     padding-left: 75px;
   }
   .recall-form__id {
-    margin-top: 100px;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 10px;
-    width: 270px;
+    margin: 72px 4px 0 0;
   }
   .recall-form__id-item {
     margin: 0;
     margin-bottom: 18px;
-    padding-top: 2px;
+    padding-top: 3px;
+    padding-left: 4px;
   }
   .recall-form__id-label {
     padding-left: 5px;
   }
   .recall-form__interview {
-    margin-top: 103px;
+    margin-top: 77px;
     margin-bottom: 0;
     margin-left: 10px;
   }
@@ -2228,14 +2218,11 @@ body {
     min-width: 260px;
     margin: 0 -92px 30px 93px;
   }
-  .form-input-checkbox:checked + label::after {
-    left: 19px;
-  }
   .recall-form__message-wrap {
     margin-left: 0;
     margin-right: 0;
     margin-top: 57px;
-    margin-bottom: 48px;
+    margin-bottom: 49px;
   }
   .recall-form__bottom-wrap {
     -webkit-box-ordinal-group: 101;
@@ -2246,7 +2233,8 @@ body {
   .recall-form__wrap-message {
     display: inline-block;
     float: right;
-    margin: 20px 0;
+    margin: 18px 0;
+    margin-bottom: 21px;
     padding-right: 10px;
     width: 200px;
     text-align: right;
@@ -2275,6 +2263,11 @@ body {
     margin: 0 auto;
     padding: 0 120px 58px 120px;
   }
+  .recall-form input[type="text"],
+  .recall-form input[type="tel"],
+  .recall-form input[type="email"] {
+    padding: 18px 22px 15px 22px;
+  }
   .recall-form__invalid-msg--tel {
     position: absolute;
     top: -39px;
@@ -2283,45 +2276,47 @@ body {
   }
   .recall-form__section {
     margin: 0;
-    width: 648px;
   }
   .recall-form__section--id {
     width: 480px;
   }
   .recall-form__section--contacts {
     width: 100%;
-    margin-top: 48px;
+    margin-top: 58px;
   }
   .recall-form__section--interview {
     width: 480px;
   }
   .recall-form__section--visited {
     width: 100%;
-    margin-top: 21px;
+    margin-top: 37px;
   }
   .recall-form__section--message {
-    margin-top: 36px;
+    margin-top: 48px;
   }
   .recall-form__title {
-    left: 73px;
+    margin-left: 73px;
   }
   .recall-form__title--highlight {
-    top: 1px;
-    left: -1px;
     margin: 0 280px;
+    margin-top: -13px;
   }
   .recall-form__id {
-    margin-top: 97px;
+    margin-top: 73px;
     margin-left: 80px;
     margin-right: 0;
     width: 400px;
   }
   .recall-form__id-label {
     padding: 0;
-    padding-top: 4px;
+  }
+  .recall-form__id-item {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
   }
   .recall-form__interview {
-    margin-top: 102px;
+    margin-top: 76px;
     margin-left: 0;
     padding-left: 5px;
   }
@@ -2341,7 +2336,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 27px;
+    margin-top: 25px;
   }
   .recall-form__contacts-item {
     display: -webkit-box;
@@ -2369,27 +2364,28 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-left: 0;
     padding-bottom: 30px;
     width: 100%;
   }
   .recall-form__visited-item {
     display: inline-block;
-    min-width: 170px;
     margin: 0;
+    margin-bottom: 10px;
+    margin-right: -23px;
   }
   .recall-form__checkbox-control {
     display: block;
-    padding: 15px 6px 15px 80px;
+    padding: 14px 2px 15px 80px;
   }
   .recall-form__checkbox-label {
     padding-left: 80px;
     margin-right: 5px;
   }
   .recall-form__message-input {
+    width: 960px;
     padding: 16px 22px;
   }
   .recall-form__message-wrap {
@@ -2487,7 +2483,6 @@ body {
   padding-top: 8px;
   padding-left: 36px;
   min-width: 70px;
-  height: 40px;
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
@@ -2621,9 +2616,6 @@ body {
   }
   .photo-list__item {
     position: relative;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     padding: 0;
     margin: 0;
     width: 33.33%;
@@ -2781,6 +2773,10 @@ body {
 }
 .video__control-btn--fullscreen {
   margin-right: 5px;
+}
+.video__control-btn:focus {
+  fill: #333333;
+  border: 0.3px dashed #ffffff;
 }
 .video__control-btn-icon {
   cursor: pointer;
