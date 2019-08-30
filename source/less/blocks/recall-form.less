@@ -637,7 +637,7 @@
   .recall-form__id-item {
     margin: 0;
     margin-bottom: 18px;
-    padding-top: 3px;
+    padding-top: 2px;
     padding-left: 4px;
   }
 
@@ -776,12 +776,13 @@
     }
 
     &--message {
-      margin-top: 48px;
+      margin-top: 37px;
     }
   }
 
   .recall-form__title {
     margin-left: 73px;
+    margin-top: -2px;
 
     &--highlight {
       margin: 0 280px;
@@ -831,8 +832,7 @@
     display: flex;
 
     width: 480px;
-    padding-right: 2px;
-    padding-top: 49px;
+    padding-top: 51px;
     margin-bottom: 9px;
   }
 
@@ -856,6 +856,7 @@
   .recall-form__visited {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     margin-left: 0;
     padding-bottom: 30px;
@@ -864,10 +865,21 @@
 
   .recall-form__visited-item {
     display: inline-block;
+    min-width: 203px;
+    margin: 0 0 10px 0;
 
-    margin: 0;
-    margin-bottom: 10px;
-    margin-right: -23px;
+    &:nth-child(2n + 4) {
+      margin-right: 0;
+      margin-left: -22px;
+    }
+
+    &:first-child {
+      margin-right: 2px;
+    }
+
+    &:nth-child(2n + 5) {
+      margin-right: 2px;
+    }
   }
 
   .recall-form__checkbox-control {

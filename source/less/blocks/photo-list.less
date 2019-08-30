@@ -21,7 +21,7 @@
 
   margin: 0 auto;
   padding-bottom: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 32px;
 
   font-size: 14px;
   line-height: 24px;
@@ -43,12 +43,16 @@
 
 .photo-list__item:last-child {
   padding: 0;
-  margin-bottom: 0;
+  margin-bottom: 17px;
 }
 
-.photo-item {
-  width: 280px;
-  height: 280px;
+.photo-list__link {
+  display: inline-block;
+  margin-bottom: -8px;
+
+  &:focus {
+    border: 1px dashed rgb(168, 196, 236);
+  }
 }
 
 .photo-list__item-caption {
@@ -157,6 +161,10 @@
 
     &:nth-child(2n + 3) .photo-list__item-caption {
       background-color: #eaeaea;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
