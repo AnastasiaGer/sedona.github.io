@@ -10,34 +10,9 @@
   padding: 0;
 }
 
-.page-header__banner {
-  position: relative;
-
-  text-align: center;
-
-  height: 388px;
-  background-color: #396e98;
-  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
-  }
-
-  &--small {
-    background-color: #396e98;
-    height: 156px;
-    background-size: 773px auto;
-    background-position: center bottom;
-  }
-}
-
 .page-header__logo {
-  position: relative;
-
   height: 0;
+  position: relative;
 }
 
 .page-header__top-logo {
@@ -54,32 +29,6 @@
   z-index: 100;
 }
 
-.page-header__banner-text {
-  padding: 32px;
-  margin-left: -101px;
-
-  width: 458px;
-  height: 78px;
-
-  transform: scale(0.5);
-  z-index: 200;
-
-  &--hide {
-    display: none;
-  }
-}
-
-.page-header__banner-big {
-  padding: 89px;
-  margin-left: -70px;
-
-  width: 282px;
-  height: 215px;
-
-  background-color: transparent;
-  z-index: 100;
-}
-
 /**
   * ===========================================================
   * PAGE HEADER tablet
@@ -93,28 +42,10 @@
     margin: 0 auto;
   }
 
-  .page-header__banner {
-    height: 518px;
-
-    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
-
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain, cover;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
-    }
-
-    &--small {
-      height: 290px;
-    }
-  }
-
   .page-header__top-logo {
-    position: fixed;
+    position: absolute;
 
-    top: 0;
+    top: -57px;
     left: 50%;
 
     margin-left: -51px;
@@ -123,20 +54,6 @@
     height: 84px;
 
     z-index: 100;
-  }
-
-  .page-header__banner-big {
-    padding: 77px;
-    margin: 0;
-    width: 460px;
-    height: 350px;
-    z-index: 1;
-  }
-
-  .page-header__banner-text {
-    padding: 95px;
-    margin: 0;
-    transform: none;
   }
 }
 /**
@@ -152,26 +69,10 @@
     margin: 0 auto;
   }
 
-  .page-header__banner {
-    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
-
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain, cover;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
-    }
-
-    &--small {
-      height: 301px;
-    }
-  }
-
   .page-header__top-logo {
-    position: fixed;
+    position: absolute;
 
-    top: 0;
+    top: -57px;
     left: 50%;
 
     margin-left: -94px;
@@ -180,13 +81,5 @@
     height: 96px;
 
     z-index: 100;
-  }
-
-  .page-header__banner-big {
-    padding: 79px;
-  }
-
-  .page-header__banner-text {
-    padding: 103px;
   }
 }
