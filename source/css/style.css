@@ -428,6 +428,8 @@ body {
   }
   .page-content__banner-text {
     padding: 95px;
+    width: 458px;
+    height: 78px;
     margin: 0;
     -webkit-transform: none;
             transform: none;
