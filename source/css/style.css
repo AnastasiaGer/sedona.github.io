@@ -190,11 +190,12 @@ body {
   position: relative;
 }
 .main-nav__toggle {
-  height: 42px;
+  height: 56px;
   background-color: #ffffff;
   padding: 0;
   margin: 0;
   border: none;
+  display: block;
   z-index: 2;
 }
 .main-nav--closed .main-nav__toggle::before {
