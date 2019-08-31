@@ -181,64 +181,67 @@ body {
   * MAIN NAVIGATION mobile
   * ===========================================================
 */
-.main-nav {
-  min-height: 56px;
+.main-nav,
+.main-nav--opened {
+  min-height: 279px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   line-height: 40px;
-  font-weight: bold;
-  background-color: #ffffff;
-  position: relative;
+  font-weight: 700;
+  color: #ffffff;
 }
 .main-nav__toggle {
-  height: 56px;
-  background-color: #ffffff;
-  padding: 0;
-  margin: 0;
-  border: none;
+  position: absolute;
   display: block;
-  z-index: 2;
+  top: 7px;
+  right: 7px;
+  width: 50px;
+  height: 40px;
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.main-nav--closed {
+  min-height: 56px;
 }
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 16px;
-  left: 276px;
-  fill: #81b3d2;
-  width: 23px;
-  height: 21px;
+  top: 10px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/icon-menu.svg");
   background-repeat: no-repeat;
-  background-size: contain;
 }
-.main-nav--opened .main-nav__toggle::before,
-.main-nav--opened .main-nav__toggle::after {
+.main-nav--opened .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 17px;
-  left: 276px;
-  fill: #ffffff;
-  width: 23px;
-  height: 22px;
-  cursor: pointer;
-  display: block;
-  background-color: #81b3d2;
-  z-index: 3;
+  top: 10px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
   background-image: url("../img/icon-cross.svg");
   background-repeat: no-repeat;
-  background-size: contain;
 }
 @media (max-width: 767px) {
-  .main-nav--closed .main-nav__item {
+  .main-nav--closed .main-nav__list {
     display: none;
   }
-  .main-nav--closed .main-nav__item--active {
-    display: block;
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
   }
   .main-nav--nojs .main-nav__list {
-    position: static;
-    min-height: 0;
-  }
-  .main-nav--nojs .main-nav__item {
     display: block;
   }
 }
@@ -275,6 +278,12 @@ body {
     * ===========================================================
 */
 @media (min-width: 768px) {
+  .main-nav {
+    min-height: 56px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+  }
   .main-nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -283,7 +292,8 @@ body {
         flex-wrap: wrap;
     background-color: #ffffff;
   }
-  .main-nav__toggle {
+  .main-nav__toggle,
+  .main-nav__close {
     display: none;
   }
   .main-nav__item {
@@ -1745,19 +1755,6 @@ body {
   position: absolute;
   left: -19px;
 }
-.recall-form__invalid-msg {
-  display: none;
-  font-size: 14px;
-  line-height: 24px;
-  color: #ff5c5c;
-  text-transform: none;
-  overflow: hidden;
-}
-.recall-form__invalid-msg--tel {
-  /*display: block;*/
-  padding: 7px 20px;
-  width: 240px;
-}
 .recall-form__section {
   position: relative;
   margin: 0;
@@ -2090,16 +2087,6 @@ body {
     padding-top: 7px;
     padding-bottom: 53px;
   }
-  .recall-form__invalid-msg--tel {
-    position: absolute;
-    top: -40px;
-    right: -20px;
-    width: 350px;
-    text-align: right;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
   .recall-form__section {
     margin: 0;
     margin-left: 10px;
@@ -2298,12 +2285,6 @@ body {
   .recall-form input[type="tel"],
   .recall-form input[type="email"] {
     padding: 18px 22px 15px 22px;
-  }
-  .recall-form__invalid-msg--tel {
-    position: absolute;
-    top: -39px;
-    left: 0;
-    text-align: left;
   }
   .recall-form__section {
     margin: 0;
