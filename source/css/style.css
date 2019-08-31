@@ -431,17 +431,17 @@ body {
     height: 290px;
   }
   .page-content__banner-big {
-    padding: 77px;
     margin: 0;
+    margin-top: 77px;
     width: 460px;
     height: 350px;
     z-index: 1;
   }
   .page-content__banner-text {
-    padding: 95px;
+    margin: 0;
+    margin-top: 94px;
     width: 458px;
     height: 78px;
-    margin: 0;
     -webkit-transform: none;
             transform: none;
   }
@@ -472,10 +472,12 @@ body {
     height: 301px;
   }
   .page-content__banner-big {
-    padding: 79px;
+    margin: 0;
+    margin-top: 78px;
   }
   .page-content__banner-text {
-    padding: 103px;
+    margin: 0;
+    margin-top: 102px;
   }
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
