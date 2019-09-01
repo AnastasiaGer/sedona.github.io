@@ -10,6 +10,13 @@ body {
   font-weight: normal;
   color: #000000;
   background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 .overlay {
@@ -41,7 +48,6 @@ body {
   border: 0;
 
   clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 @media (min-width: @desktop-max-width) {
