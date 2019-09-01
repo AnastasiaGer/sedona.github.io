@@ -53,6 +53,7 @@ body {
   padding: 0;
   border: 0;
   clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 @media (min-width: 1200px) {
   .visually-hidden-desktop {
@@ -170,7 +171,7 @@ body {
 */
 @media (min-width: 1200px) {
   .page-header {
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
   }
   .page-header__top-logo {
@@ -256,6 +257,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  overflow: hidden;
 }
 .main-nav__link {
   display: block;
@@ -464,7 +466,7 @@ body {
 */
 @media (min-width: 1200px) {
   .page-content {
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
   }
   .page-content__banner {
@@ -610,7 +612,7 @@ body {
   .page-intro {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     padding: 30px 345px;
     padding-bottom: 20px;
@@ -712,6 +714,7 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
+  overflow: hidden;
 }
 .advantages__item--city {
   display: -webkit-box;
@@ -963,6 +966,7 @@ body {
   .advantages__item {
     width: 170px;
     min-height: 196px;
+    overflow: hidden;
   }
   .advantages__item--city {
     -ms-flex-wrap: nowrap;
@@ -1189,7 +1193,7 @@ body {
 */
 @media (min-width: 1200px) {
   .advantages {
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
   }
   .advantages__item--city {
@@ -1406,7 +1410,7 @@ body {
   .hotel-search-dialog {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     padding: 37px 60px;
     padding-bottom: 67px;
@@ -1603,7 +1607,7 @@ body {
 */
 @media (min-width: 1200px) {
   .page-footer {
-    width: 100%;
+    width: 1200px;
     padding: 22px 120px;
     margin: 0 auto;
   }
@@ -1787,6 +1791,7 @@ body {
   text-align: center;
   -webkit-transform: translateY(18px);
           transform: translateY(18px);
+  overflow: hidden;
 }
 /**
   * ===========================================================
@@ -2049,6 +2054,7 @@ body {
   background-color: #f2f2f2;
   resize: none;
   outline: none;
+  overflow: auto;
 }
 .recall-form__message-input::-webkit-input-placeholder {
   color: #000000;
@@ -2152,6 +2158,7 @@ body {
     line-height: 26px;
     text-align: left;
     border: none;
+    overflow: inherit;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
@@ -2165,6 +2172,7 @@ body {
     background: #ffffff;
     -webkit-transform: none;
             transform: none;
+    overflow: visible;
     white-space: normal;
   }
   .recall-form__title--visited {
@@ -2176,6 +2184,7 @@ body {
     background: #ffffff;
     -webkit-transform: none;
             transform: none;
+    overflow: visible;
     white-space: normal;
   }
   .recall-form__radio-control {
@@ -2278,7 +2287,7 @@ body {
   .recall-form {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 120px 58px 120px;
   }
@@ -2556,6 +2565,7 @@ body {
     margin: 0;
     width: 50%;
     border: none;
+    overflow: hidden;
   }
   .photo-list__item::after {
     display: none;
@@ -2600,15 +2610,18 @@ body {
     margin: 0;
     width: 100%;
     background-color: #f2f2f2;
+    overflow: hidden;
   }
   .photo-list__item-id {
     width: 210px;
   }
   .photo-list__item-name {
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
   .photo-list__item-author {
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
@@ -2642,7 +2655,7 @@ body {
 @media (min-width: 1200px) {
   .photo-list {
     padding: 0;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
   }
   .photo-list__item {
@@ -2653,6 +2666,7 @@ body {
     height: 267px;
     color: #ffffff;
     border: none;
+    overflow: hidden;
   }
   .photo-list__item img {
     width: 100%;
@@ -2935,7 +2949,7 @@ body {
   .video {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     padding-top: 71px;
     padding-bottom: 85px;
@@ -2982,6 +2996,7 @@ body {
           box-shadow: 0 10px 35px -20px rgba(0, 0, 0, 0.7), 0 0 15px -20px rgba(0, 0, 0, 0.7);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  overflow: hidden;
   text-align: center;
   z-index: 500;
 }
@@ -3011,12 +3026,14 @@ body {
   font-size: 18px;
   line-height: 26px;
   max-height: 20vh;
+  overflow: hidden;
 }
 .modal-dialog__content {
   margin: 0;
   margin-bottom: 5px;
   padding: 0 5px;
   max-height: 35vh;
+  overflow: hidden;
 }
 .modal-dialog__btn-ok {
   margin: 20px;
