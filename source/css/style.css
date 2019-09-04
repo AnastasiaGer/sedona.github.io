@@ -1378,7 +1378,7 @@ body {
   min-width: 280px;
 }
 .hotel-search-dialog__btn:focus {
-  border: 2px dashed #a8c4ec;
+  outline: #5496bd auto 5px;
 }
 /**
   * ===========================================================
@@ -2085,7 +2085,7 @@ body {
   width: 280px;
 }
 .recall-form__btn:focus {
-  border: 2px dashed #a8c4ec;
+  outline: #5496bd auto 5px;
 }
 /**
   * ===========================================================
@@ -2497,7 +2497,7 @@ body {
   margin-bottom: -8px;
 }
 .photo-list__link:focus {
-  border: 1px dashed #a8c4ec;
+  border: 0.5px dashed #81b3d2;
 }
 .photo-list__item-caption {
   display: -webkit-box;
@@ -2787,13 +2787,13 @@ body {
   height: 3px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-}
-.video__control-slider-line {
-  height: 3px;
-  background-color: rgba(225, 225, 255, 0.3);
   cursor: pointer;
 }
-.video__control-slider-toggle {
+.video__control-slider--line {
+  height: 3px;
+  background-color: rgba(225, 225, 255, 0.3);
+}
+.video__control-slider--toggle {
   position: absolute;
   width: 9px;
   height: 9px;
@@ -2802,11 +2802,9 @@ body {
   margin-top: -3px;
   border-radius: 5px;
   background-color: #ffffff;
-  cursor: pointer;
-  display: inline;
 }
-.video__control-slider-toggle:focus {
-  outline: #5496bd auto 5px;
+.video__control-slider--toggle:focus {
+  outline: #81b3d2 auto 5px;
 }
 .video__control-btn {
   margin: 0;
@@ -2834,7 +2832,7 @@ body {
 }
 .video__control-btn:focus {
   fill: #333333;
-  border: 0.3px dashed #ffffff;
+  outline: #5496bd auto 5px;
 }
 .video__control-btn-icon {
   cursor: pointer;
@@ -2909,7 +2907,7 @@ body {
     width: auto;
     background-color: transparent;
   }
-  .video__control-slider-toggle {
+  .video__control-slider--toggle {
     left: 136px;
     margin-top: -5px;
   }
