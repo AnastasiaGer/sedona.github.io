@@ -50,6 +50,7 @@
   "dependencies": {
     "del": "^5.0.0",
     "gulp-html-minifier": "^0.1.8",
-    "html-minifier": "^4.0.0"
+    "html-minifier": "^4.0.0",
+    "node": "^14.4.0"
   }
 }
