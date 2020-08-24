@@ -45,7 +45,7 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "8.16"
+    "node": "10"
   },
   "dependencies": {
     "del": "5.0.0"
