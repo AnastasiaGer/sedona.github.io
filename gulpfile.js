@@ -15,7 +15,6 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
-var htmlmin = require("gulp-html-minifier");
 var del = require("del");
 
 gulp.task("css", function () {
@@ -99,7 +98,6 @@ gulp.task("html", function () {
 
 gulp.task("minify", function() {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"))
 });
 
